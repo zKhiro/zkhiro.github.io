@@ -1,0 +1,70 @@
+// Bootstrap rewrite variables
+  $white:    #fff !default;
+  $gray-100: #f8f9fa !default;
+  $gray-200: #e9ecef !default;
+  $gray-300: #dee2e6 !default;
+  $gray-400: #ced4da !default;
+  $gray-500: #adb5bd !default;
+  $gray-600: #6c757d !default;
+  $gray-700: #495057 !default;
+  $gray-800: #343a40 !default;
+  $gray-900: #212529 !default;
+  $black:    #000 !default;
+
+  $blue:    #0d6efd;
+  $indigo:  #6610f2;
+  $purple:  #6f42c1;
+  $pink:    #d63384;
+  $red:     #dc3545;
+  $orange:  #DD4C3C;
+  $yellow:  #ffc107;
+  $green:   #198754;
+  $teal:    #20c997;
+  $cyan:    #0dcaf0;
+
+  $colors: (
+    "blue":       $blue,
+    "indigo":     $indigo,
+    "purple":     $purple,
+    "pink":       $pink,
+    "red":        $red,
+    "orange":     $orange,
+    "yellow":     $yellow,
+    "green":      $green,
+    "teal":       $teal,
+    "cyan":       $cyan,
+    "white":      $white,
+    "gray":       $gray-600,
+    "gray-dark":  $gray-800
+  );
+
+  $primary:       $orange;
+  $secondary:     $gray-600;
+  $success:       $green;
+  $info:          $cyan;
+  $warning:       $yellow;
+  $danger:        $red;
+  $light:         $gray-100;
+  $dark:          #0C1227;
+
+  $theme-colors: (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+  );
+
+  $body-color:    $white;
+
+  $link-color:      $primary !default;
+  $link-decoration: underline !default;
+// End bootstrap rewrite variables
+
+// Project Variables
+$noise-texture-default: url($images-folder + 'noise-texture-default.png') 142%;
+
+$bg-primary: $noise-texture-default, $dark;

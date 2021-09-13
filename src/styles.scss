@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+/** Fonts */
+@import "assets/fonts/fira-code/";
+@import "assets/fonts/poppins/";
+@import "assets/fonts/raleway/";
+
+@import "./scss/";
+
+@import "~bootstrap/scss/bootstrap";

@@ -1,0 +1,12 @@
+@mixin ani-generator($duration, $iteration: 1, $cubic-bezier: ease) {
+  $ani-name: ani- + unique-id();
+
+  animation-duration:         $duration;
+  animation-name:             $ani-name;
+  animation-timing-function:  $cubic-bezier;
+  animation-iteration-count:  $iteration;
+
+  @keyframes #{$ani-name} {
+    @content;
+  }
+}

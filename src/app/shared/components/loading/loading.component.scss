@@ -1,3 +1,50 @@
+@import "mixins/animations";
+@import "variables/";
+
+$position-above: -$h2-font-size;
+$position-under: $h2-font-size;
+
+$position-indent: .8rem;
+
+$animation-duration: 1.8s;
+
+
 .h2 {
-  letter-spacing: .2rem;
+  transform-origin: center;
+
+  * {
+    animation-delay:  1s;
+    text-align:       center;
+    width:            $h2-font-size;
+  }
+
+  .l {
+    @include ani-generator($animation-duration, infinite, linear) {
+      $position-right: $h2-font-size * 2;
+
+      5%, 10%   { transform: translateX(-$position-indent); }
+      15%       { transform: translate(-$position-indent,   $position-above); }
+      25%, 40%  { transform: translate($position-under,     $position-above); }
+      45%       { transform: translate($position-right,     $position-above); }
+      45%, 50%  { transform: translate($position-right + 1, $position-above); }
+      55%       { transform: translate($position-right + 1, $position-under); }
+      65%       { transform: translate(0,                   $position-under); }
+      80%, 100% { transform: translate(0,                   0) }
+    };
+  }
+
+  .b {
+    @include ani-generator($animation-duration, infinite, linear) {
+      $position-left: -$h2-font-size * 2;
+
+      5%, 10%   { transform: translateX($position-indent); }
+      15%       { transform: translate($position-indent,    $position-under); }
+      25%, 40%  { transform: translate($position-above,     $position-under); }
+      45%       { transform: translate($position-left,      $position-under); }
+      45%, 50%  { transform: translate($position-left - 1,  $position-under); }
+      55%       { transform: translate($position-left - 1,  $position-above); }
+      65%       { transform: translate(0,                   $position-above); }
+      80%, 100% { transform: translate(0,                   0) }
+    };
+  }
 }

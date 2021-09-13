@@ -1,1 +1,5 @@
-<h1>Teste</h1>
+<div *ngIf="!isLoading" class="container">
+  <button class="btn btn-outline-primary">Skill Tree</button>
+</div>
+
+<app-loading *ngIf="isLoading"></app-loading>

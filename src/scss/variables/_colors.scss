@@ -1,4 +1,4 @@
-// Bootstrap rewrite variables
+// Rewrited bootstrap variables
   $white:    #fff !default;
   $gray-100: #f8f9fa !default;
   $gray-200: #e9ecef !default;
@@ -58,13 +58,16 @@
     "dark":       $dark
   );
 
+  $color-contrast-dark:      $dark;
+  $color-contrast-light:     $white;
+
   $body-color:    $white;
 
-  $link-color:      $primary !default;
-  $link-decoration: underline !default;
-// End bootstrap rewrite variables
+  $link-color:      $primary;
+  $link-decoration: underline;
+// End rewrited bootstrap variables
 
 // Project Variables
-$noise-texture-default: url($images-folder + 'noise-texture-default.png') 142%;
+  $noise-texture-default: url($images-folder + 'noise-texture-default.png') 142%;
 
-$bg-primary: $noise-texture-default, $dark;
+  $bg-primary:            $noise-texture-default, $dark;

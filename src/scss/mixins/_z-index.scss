@@ -1,0 +1,5 @@
+@mixin generate-zindex-class($zindexs) {
+  @each $component, $zindex in $zindexs {
+    .z-index-#{$component} { z-index: $zindex; }
+  }
+}

@@ -1,0 +1,27 @@
+// Rewrite bootstrap variables
+  $zindex-dropdown:                   1000;
+  $zindex-sticky:                     1020;
+  $zindex-fixed:                      1030;
+  $zindex-offcanvas-backdrop:         1040;
+  $zindex-offcanvas:                  1045;
+  $zindex-modal-backdrop:             1050;
+  $zindex-modal:                      1055;
+  $zindex-popover:                    1070;
+  $zindex-tooltip:                    1080;
+// End Rewrite boostrap variables
+
+// Projects variables
+  $zindex-loading:                    1100;
+
+  $zindexs: (
+    "dropdown":           $zindex-dropdown,
+    "sticky":             $zindex-sticky,
+    "fixed":              $zindex-fixed,
+    "offcanvas-backdrop": $zindex-offcanvas-backdrop,
+    "offcanvas":          $zindex-offcanvas,
+    "modal-backdrop":     $zindex-modal-backdrop,
+    "modal":              $zindex-modal,
+    "popover":            $zindex-popover,
+    "tooltip":            $zindex-tooltip,
+    "loading":            $zindex-loading,
+  )

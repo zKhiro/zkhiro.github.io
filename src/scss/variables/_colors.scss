@@ -1,3 +1,5 @@
+@use "utils" as u;
+
 // Rewrited bootstrap variables
   $white:    #fff !default;
   $gray-100: #f8f9fa !default;
@@ -68,6 +70,6 @@
 // End rewrited bootstrap variables
 
 // Project Variables
-  $noise-texture-default: url($images-folder + 'noise-texture-default.png') 142%;
+  $noise-texture-default: url(u.$images-folder + 'noise-texture-default.png') 142%;
 
   $bg-primary:            $noise-texture-default, $dark;

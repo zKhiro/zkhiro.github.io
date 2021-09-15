@@ -1,13 +1,11 @@
-import { Route } from '@angular/compiler/src/core';
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-
-import { AppComponent } from './app.component';
-import { SharedModule } from './shared/shared.module';
 
 
 const routes: Routes = [
+  { path: '',           loadChildren: () => import('./view/home/home.module').then(m => m.HomeModule) },
+  { path: 'skill-tree', loadChildren: () => import('./view/skill-tree/skill-tree.module').then(m => m.SkillTreeModule) },
+
   { path: '**', redirectTo: '' },
 ]
 

@@ -23,6 +23,7 @@
     ],
     "paths": {
       "@models": ["src/app/core/models"],
+      "@utils": ["src/app/core/utils"],
     }
   },
   "angularCompilerOptions": {

@@ -1,0 +1,28 @@
+@use "variables/colors" as c;
+@use "variables/utils"  as u;
+
+// TO-DO: Finalize footer gradient.
+.footer {
+  background: url(u.$images-folder + "noise-texture-gradient.png"),
+              linear-gradient(
+                to top,
+                rgba(c.$dark, 1)      0%,
+                rgba(c.$dark, 0.991)  18.4%,
+                rgba(c.$dark, 0.964)  33.8%,
+                rgba(c.$dark, 0.922)  46.6%,
+                rgba(c.$dark, 0.867)  57%,
+                rgba(c.$dark, 0.801)  65.3%,
+                rgba(c.$dark, 0.726)  71.8%,
+                rgba(c.$dark, 0.644)  76.8%,
+                rgba(c.$dark, 0.558)  80.7%,
+                rgba(c.$dark, 0.469)  83.7%,
+                rgba(c.$dark, 0.379)  86.1%,
+                rgba(c.$dark, 0.292)  88.2%,
+                rgba(c.$dark, 0.208)  90.4%,
+                rgba(c.$dark, 0.13)   92.9%,
+                rgba(c.$dark, 0.06)   96%,
+                rgba(c.$dark, 0)      100%,
+              );
+  height: 56px;
+  gap:    18px;
+}

@@ -1,28 +1,25 @@
 @use "variables/colors" as c;
-@use "variables/utils"  as u;
+@use "variables/footer";
 
-// TO-DO: Finalize footer gradient.
+.footer, .footer-content { background: c.$bg-dark; }
+
 .footer {
-  background: url(u.$images-folder + "noise-texture-gradient.png"),
-              linear-gradient(
-                to top,
-                rgba(c.$dark, 1)      0%,
-                rgba(c.$dark, 0.991)  18.4%,
-                rgba(c.$dark, 0.964)  33.8%,
-                rgba(c.$dark, 0.922)  46.6%,
-                rgba(c.$dark, 0.867)  57%,
-                rgba(c.$dark, 0.801)  65.3%,
-                rgba(c.$dark, 0.726)  71.8%,
-                rgba(c.$dark, 0.644)  76.8%,
-                rgba(c.$dark, 0.558)  80.7%,
-                rgba(c.$dark, 0.469)  83.7%,
-                rgba(c.$dark, 0.379)  86.1%,
-                rgba(c.$dark, 0.292)  88.2%,
-                rgba(c.$dark, 0.208)  90.4%,
-                rgba(c.$dark, 0.13)   92.9%,
-                rgba(c.$dark, 0.06)   96%,
-                rgba(c.$dark, 0)      100%,
-              );
-  height: 56px;
-  gap:    18px;
+  height: footer.$size;
+
+  .footer-content {
+    gap:      18px;
+    z-index:  0;
+  }
+}
+
+hr {
+  background:           radial-gradient(farthest-side, c.$primary, rgba(c.$primary, 0));
+  background-position:  center;
+  background-repeat:    no-repeat;
+  background-size:      115%;
+  margin:               0;
+  opacity:              0.2;
+  pointer-events:       none;
+  position:             absolute;
+  z-index:              1;
 }

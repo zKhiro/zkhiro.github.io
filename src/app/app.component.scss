@@ -1,0 +1,6 @@
+@use "variables/footer";
+
+.main-content {
+  padding-bottom: calc(#{footer.$size} + 1rem);
+  padding-top:    1rem;
+}

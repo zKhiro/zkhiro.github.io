@@ -70,6 +70,6 @@
 // End rewrited bootstrap variables
 
 // Project Variables
-  $noise-texture-default: url(u.$images-folder + 'noise-texture-default.png') 142%;
+  $noise-texture-default: url(u.$images-folder + 'noise-texture-default.png');
 
-  $bg-primary:            $noise-texture-default, $dark;
+  $bg-dark:               $noise-texture-default, $dark;

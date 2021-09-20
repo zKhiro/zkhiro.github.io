@@ -1,0 +1,32 @@
+@use "variables/colors";
+
+$profile-picture-marker-height: 6px;
+$profile-picture-marker-width:  14px;
+
+.header {
+
+
+  .feather-icon {
+    height: 3rem;
+    width:  3rem;
+  }
+
+  .profile-picture {
+
+    img {
+      border-bottom-left-radius: .5rem;
+    }
+
+    &::after {
+      background-color: colors.$primary;
+      border-radius:    99rem;
+      bottom:           0;
+      box-shadow:       0 0 0 2px colors.$dark;
+      content:          "";
+      height:           $profile-picture-marker-height;
+      margin-bottom:    -$profile-picture-marker-height / 2;
+      position:         absolute;
+      width:            $profile-picture-marker-width;
+    }
+  }
+}

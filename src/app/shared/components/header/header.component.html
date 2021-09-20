@@ -1,0 +1,19 @@
+<div class="bg-dark position-fixed top-0 w-100 pb-2">
+  <div class="header container d-flex align-items-center pt-4 px-0">
+    <a class="btn text-primary p-0 me-3" [routerLink]="['']">
+      <svg featherIcon="chevron-left"></svg>
+      <span class="visually-hidden">back</span>
+    </a>
+
+    <div class="profile-picture d-inline-flex justify-content-center position-relative">
+      <img class="w-auto pe-0" src="https://via.placeholder.com/77x85" alt="leandro-profile-picture">
+    </div>
+
+    <div class="d-inline-flex flex-column ms-3">
+      <h5 class="mb-1">{{ commonStrings.name }}</h5>
+      <p class="font-monospace fs-7">{{ commonStrings.position }}</p>
+
+      <app-badge>24</app-badge>
+    </div>
+  </div>
+</div>

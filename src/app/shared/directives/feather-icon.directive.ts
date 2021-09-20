@@ -11,7 +11,7 @@ export class FeatherIconDirective implements OnInit {
 
   @Input() fiClasses: string[] = [];
 
-  private readonly featherIconDir = `${Assets.imagesDir}feather-sprite.svg#`;
+  private readonly featherIconDir = `${Assets.svg}feather-sprite.svg#`;
 
 
   constructor(private el: ElementRef<SVGElement>) { }

@@ -1,0 +1,25 @@
+@import "variables";
+
+$padding-x: 8px;
+
+.badge {
+  border-radius:  4px;
+  font-size:      map-get($font-sizes, 8);
+  overflow:       hidden;
+  padding:        0;
+
+  &.bedge-secondary {
+    box-shadow: 0 0 0 1px $secondary;
+
+    .badge-value { background-color: $secondary; }
+  }
+}
+
+.badge-value {
+  font-size:  1.2em;
+  padding:    4px;
+}
+
+.badge-label {
+  padding: 2px 8px;
+}

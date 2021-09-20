@@ -1,4 +1,7 @@
 export class Assets {
-  /** Get images directory. */
-  static imagesDir = "/assets/images/";
+  /** Get path to `svg` images. */
+  static svg = "/assets/images/svg/";
+
+  /** Get path to `png` images. */
+  static png = "/assets/images/png/";
 }

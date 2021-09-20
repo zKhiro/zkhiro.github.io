@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { components } from './components';
 import { directives } from './directives';
@@ -10,7 +11,8 @@ import { directives } from './directives';
     ...directives,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
   ],
   exports: [
     ...components,

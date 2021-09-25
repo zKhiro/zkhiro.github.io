@@ -14,7 +14,7 @@
       <p class="font-monospace fs-7">{{ commonStrings.position }}</p>
 
       <div class="d-flex">
-        <app-badge>24</app-badge>
+        <app-badge>{{ currentLevel }}</app-badge>
 
         <div class="progress-bar-section">
           <div class="d-flex align-items-center progress-bar-label text-success fs-9">
@@ -22,9 +22,10 @@
 
             <span class="font-monospace">Next Level</span>
 
-            <span class="ms-auto">{{ totalExp }} <span class="experience">EXP</span></span>
+            <span class="ms-auto">{{ remainingExperienceToNextLevel }} <span class="experience">EXP</span></span>
           </div>
-          <app-progress-bar [progress]="75"></app-progress-bar>
+
+          <app-progress-bar [progress]="experienceProgress"></app-progress-bar>
         </div>
       </div>
     </div>

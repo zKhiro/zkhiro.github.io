@@ -1,22 +1,30 @@
 @use "variables/colors";
 
+%transition-width { transition: .8s .5s width cubic-bezier(0.04, 0.02, 0.17, 1.02); }
+
 
 .progress-bar {
   background:     none;
   flex-direction: row !important;
 
   .total-progress {
+    @extend %transition-width;
+
     border-radius:  999rem;
     background:     linear-gradient(90deg, rgba(colors.$success, 0), colors.$success);
     height:         5px;
+    width:          0%;
     z-index:        1;
   }
 
   .progress-remaining {
+    @extend %transition-width;
+
     background-color: colors.$secondary;
     border-radius:    1px;
     height:           1px;
     margin-left:      -1px;
+    width:            calc(100% + 1px);
     z-index:          0;
   }
 }

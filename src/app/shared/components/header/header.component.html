@@ -1,33 +1,5 @@
 <div class="bg-dark position-fixed top-0 w-100 pb-2">
   <div class="header container d-flex align-items-center pt-4 px-0">
-    <a class="btn text-primary p-0 me-3" [routerLink]="['']">
-      <svg class="chevron-left" featherIcon="chevron-left"></svg>
-      <span class="visually-hidden">back</span>
-    </a>
-
-    <div class="profile-picture d-inline-flex justify-content-center position-relative">
-      <img class="w-auto pe-0" src="https://via.placeholder.com/77x85" alt="leandro-profile-picture">
-    </div>
-
-    <div class="d-inline-flex flex-column ms-3">
-      <h5 class="mb-1">{{ commonStrings.name }}</h5>
-      <p class="font-monospace fs-7">{{ commonStrings.position }}</p>
-
-      <div class="d-flex">
-        <app-badge>{{ currentLevel }}</app-badge>
-
-        <div class="progress-bar-section">
-          <div class="d-flex align-items-center progress-bar-label text-success fs-9">
-            <svg class="chevrons-up" featherIcon="chevrons-up"></svg>
-
-            <span class="font-monospace">Next Level</span>
-
-            <span class="ms-auto">{{ remainingExperienceToNextLevel }} <span class="experience">EXP</span></span>
-          </div>
-
-          <app-progress-bar [progress]="experienceProgress"></app-progress-bar>
-        </div>
-      </div>
-    </div>
+    <app-user-profile></app-user-profile>
   </div>
 </div>

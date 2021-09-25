@@ -1,0 +1,51 @@
+@use "sass:math";
+
+@use "variables/colors";
+
+$profile-picture-marker-height: 6px;
+$profile-picture-marker-width:  14px;
+
+
+.feather-icon{
+  &.chevron-left {
+    height: 3rem;
+    width:  3rem;
+  }
+
+  &.chevrons-up {
+    height:       12px;
+    stroke-width: 2;
+    width:        12px;
+  }
+}
+
+.profile-picture {
+  img {
+    border-bottom-left-radius: .5rem;
+  }
+
+  &::after {
+    background-color: colors.$primary;
+    border-radius:    99rem;
+    bottom:           0;
+    box-shadow:       0 0 0 2px colors.$dark;
+    content:          "";
+    height:           $profile-picture-marker-height;
+    margin-bottom:    math.div(-$profile-picture-marker-height, 2);
+    position:         absolute;
+    width:            $profile-picture-marker-width;
+  }
+}
+
+.progress-bar-section {
+  margin-left: 58px;
+  width:       134px;
+
+  .progress-bar-label {
+    margin-bottom: 1px;
+
+    .experience {
+      font-size: 8px !important;
+    }
+  }
+}

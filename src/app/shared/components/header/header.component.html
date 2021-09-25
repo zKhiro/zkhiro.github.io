@@ -1,7 +1,7 @@
 <div class="bg-dark position-fixed top-0 w-100 pb-2">
   <div class="header container d-flex align-items-center pt-4 px-0">
     <a class="btn text-primary p-0 me-3" [routerLink]="['']">
-      <svg featherIcon="chevron-left"></svg>
+      <svg class="chevron-left" featherIcon="chevron-left"></svg>
       <span class="visually-hidden">back</span>
     </a>
 
@@ -13,7 +13,20 @@
       <h5 class="mb-1">{{ commonStrings.name }}</h5>
       <p class="font-monospace fs-7">{{ commonStrings.position }}</p>
 
-      <app-badge>24</app-badge>
+      <div class="d-flex">
+        <app-badge>24</app-badge>
+
+        <div class="progress-bar-section">
+          <div class="d-flex align-items-center progress-bar-label text-success fs-9">
+            <svg class="chevrons-up" featherIcon="chevrons-up"></svg>
+
+            <span class="font-monospace">Next Level</span>
+
+            <span class="ms-auto">{{ totalExp }} <span class="experience">EXP</span></span>
+          </div>
+          <app-progress-bar [progress]="75"></app-progress-bar>
+        </div>
+      </div>
     </div>
   </div>
 </div>

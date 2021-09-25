@@ -1,0 +1,22 @@
+@use "variables/colors";
+
+
+.progress-bar {
+  background:     none;
+  flex-direction: row !important;
+
+  .total-progress {
+    border-radius:  999rem;
+    background:     linear-gradient(90deg, rgba(colors.$success, 0), colors.$success);
+    height:         5px;
+    z-index:        1;
+  }
+
+  .progress-remaining {
+    background-color: colors.$secondary;
+    border-radius:    1px;
+    height:           1px;
+    margin-left:      -1px;
+    z-index:          0;
+  }
+}

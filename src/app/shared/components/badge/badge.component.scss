@@ -4,7 +4,7 @@ $padding-x: 8px;
 
 .badge {
   border-radius:  4px;
-  font-size:      map-get($font-sizes, 8);
+  font-size:      map-get($font-sizes, 9);
   overflow:       hidden;
   padding:        0;
 
@@ -17,9 +17,10 @@ $padding-x: 8px;
 
 .badge-value {
   font-size:  1.2em;
-  padding:    4px;
+  padding:    2px 4px;
 }
 
 .badge-label {
-  padding: 2px 8px;
+  line-height:  9px;
+  padding:      2px 8px;
 }

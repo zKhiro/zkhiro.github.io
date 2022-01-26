@@ -1,7 +1,9 @@
 <app-header></app-header>
 
-<div class="main-content d-flex justify-content-center align-items-center min-vh-100 min-vw-100">
-
+<div
+  class="main-content d-flex justify-content-center align-items-center min-vh-100 min-vw-100"
+  [class.header-padding]="true"
+>
   <div class="container">
     <router-outlet></router-outlet>
   </div>

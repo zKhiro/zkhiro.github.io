@@ -1,5 +1,9 @@
-<div class="bg-dark position-fixed top-0 w-100 pb-2">
-  <div class="header container d-flex align-items-center pt-4 px-0">
+<div class="bg-dark position-fixed top-0 w-100 pb-2" [hidden]="headerService.hidden">
+  <div class="container d-flex align-items-center position-relative pt-4 px-0">
     <app-user-profile></app-user-profile>
+
+    <div class="d-flex align-items-center mx-auto">
+      <h1 class="mb-0">{{ headerService.title }}</h1>
+    </div>
   </div>
 </div>

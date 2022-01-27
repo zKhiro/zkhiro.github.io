@@ -11,15 +11,3 @@
     z-index:  0;
   }
 }
-
-hr {
-  background:           radial-gradient(farthest-side, c.$primary, rgba(c.$primary, 0));
-  background-position:  center;
-  background-repeat:    no-repeat;
-  background-size:      115%;
-  margin:               0;
-  opacity:              0.2;
-  pointer-events:       none;
-  position:             absolute;
-  z-index:              1;
-}

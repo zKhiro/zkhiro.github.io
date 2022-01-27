@@ -1,0 +1,9 @@
+hr {
+  background:           radial-gradient(farthest-side, $primary, rgba($primary, 0));
+  background-position:  center;
+  background-repeat:    no-repeat;
+  background-size:      115%;
+  margin:               0;
+  opacity:              0.2;
+  pointer-events:       none;
+}

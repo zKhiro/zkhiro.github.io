@@ -1,4 +1,4 @@
-export interface TimezoneApiResponse {
+export interface TimezoneApiResponseModel {
   abbreviation: string,
   client_ip: string,
   datetime: string,

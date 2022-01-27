@@ -22,6 +22,7 @@
       "dom"
     ],
     "paths": {
+      "@configs": ["src/app/core/configs"],
       "@models": ["src/app/core/models"],
       "@utils": ["src/app/core/utils"],
       "@service/*": ["src/app/core/service/*"],

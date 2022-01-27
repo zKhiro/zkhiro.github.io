@@ -6,6 +6,10 @@ $profile-picture-marker-height: 6px;
 $profile-picture-marker-width:  14px;
 
 
+.user-profile {
+  height: 85px;
+}
+
 .feather-icon{
   &.chevron-left {
     height: 3rem;
@@ -14,6 +18,7 @@ $profile-picture-marker-width:  14px;
 
   &.chevrons-up {
     height:       12px;
+    margin-right: 2px;
     stroke-width: 2;
     width:        12px;
   }
@@ -41,8 +46,10 @@ $profile-picture-marker-width:  14px;
   margin-left: 58px;
   width:       134px;
 
+  .font-monospace { letter-spacing: .02em; }
+
   .progress-bar-label {
-    margin-bottom: 1px;
+    margin-bottom: 2px;
 
     .experience {
       font-size: 8px !important;

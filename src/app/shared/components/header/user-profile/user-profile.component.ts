@@ -1,7 +1,9 @@
 import * as moment from 'moment';
+import { Subscription } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
+import { HeaderService } from '@service/header.service';
 import { TimezoneApiService } from '@service/timezone-api.service';
 import { COMMON_STRINGS, CommonStrings } from '@utils';
 
@@ -11,31 +13,48 @@ import { COMMON_STRINGS, CommonStrings } from '@utils';
   styleUrls: ['./user-profile.component.scss'],
   providers: [ TimezoneApiService ],
 })
-export class UserProfileComponent implements OnInit {
+export class UserProfileComponent implements OnInit, OnDestroy {
 
   /** Level actually means my age. */
-  currentLevel: number;
+  currentLevel = 0;
 
   /** Experience correspond one day of a year. */
-  remainingExperienceToNextLevel: number;
+  remainingExperienceToNextLevel = 0;
 
   /** Represent percentage of my next birthdate. */
   experienceProgress: number;
+
+  totalDaysCurrentYear = 0;
+
+  onHiddenSubscribe: Subscription;
+
+  resetAnimation = true;
 
 
   constructor(
     @Inject(COMMON_STRINGS) readonly commonStrings: typeof CommonStrings,
     private readonly timezoneApiService: TimezoneApiService,
+    public readonly headerService: HeaderService,
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getCurrentDate();
+
+    this.onHiddenSubscribe = this.headerService.onHidden.subscribe(isHidden => {
+      setTimeout(() => this.resetAnimation = isHidden);
+    })
+  }
+
+  ngOnDestroy(): void {
+    this.onHiddenSubscribe.unsubscribe();
   }
 
   private getCurrentDate(): void {
     this.timezoneApiService.getTimezone().pipe(
       tap(response => {
         this.currentLevel = this.calculateMyAge(response.datetime);
+
+        this.totalDaysCurrentYear = moment(response.datetime).set({ date: 31, month: 11 }).dayOfYear();
 
         this.calculateProgressToMyNextBirthdate(response.datetime);
       }),

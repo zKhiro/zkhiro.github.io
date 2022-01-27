@@ -1,30 +1,40 @@
-<div class="d-flex align-items-center">
-  <a class="btn text-primary p-0 me-3" [routerLink]="['']">
-    <svg class="chevron-left" featherIcon="chevron-left"></svg>
-    <span class="visually-hidden">back</span>
-  </a>
+<div class="user-profile">
+  <div class="d-flex align-items-center position-absolute">
+    <a class="btn text-primary p-0 me-3" [routerLink]="['']">
+      <svg class="chevron-left" featherIcon="chevron-left"></svg>
+      <span class="visually-hidden">back</span>
+    </a>
 
-  <div class="profile-picture d-inline-flex justify-content-center position-relative">
-    <img class="w-auto pe-0" src="https://via.placeholder.com/77x85" alt="leandro-profile-picture">
-  </div>
+    <div class="profile-picture d-inline-flex justify-content-center position-relative">
+      <img class="w-auto pe-0" src="https://via.placeholder.com/77x85" alt="leandro-profile-picture">
+    </div>
 
-  <div class="d-inline-flex flex-column ms-3">
-    <h5 class="mb-1">{{ commonStrings.name }}</h5>
-    <p class="font-monospace fs-7">{{ commonStrings.position }}</p>
+    <div class="d-inline-flex flex-column ms-3">
+      <h5 class="mb-1">{{ commonStrings.name }}</h5>
+      <p class="font-monospace fs-7">{{ commonStrings.position }}</p>
 
-    <div class="d-flex">
-      <app-badge>{{ currentLevel }}</app-badge>
+      <div class="d-flex">
+        <app-badge [number]="resetAnimation ? 0 : currentLevel"></app-badge>
 
-      <div class="progress-bar-section">
-        <div class="d-flex align-items-center progress-bar-label text-success fs-9">
-          <svg class="chevrons-up" featherIcon="chevrons-up"></svg>
+        <div class="progress-bar-section">
+          <div class="d-flex align-items-end progress-bar-label text-success fs-9">
+            <svg class="chevrons-up" featherIcon="chevrons-up"></svg>
 
-          <span class="font-monospace">Next Level</span>
+            <span class="font-monospace">Next Level</span>
 
-          <span class="ms-auto">{{ remainingExperienceToNextLevel }} <span class="experience">EXP</span></span>
+            <span
+              class="ms-auto"
+              textAlign="right"
+              [animateNumber]="resetAnimation ? 0 : remainingExperienceToNextLevel"
+              [delay]="500"
+              [decrease]="true"
+              [initialValue]="totalDaysCurrentYear"
+            ></span>
+            <span class="experience ms-1">EXP</span>
+          </div>
+
+          <app-progress-bar [progress]="resetAnimation ? 0 : experienceProgress"></app-progress-bar>
         </div>
-
-        <app-progress-bar [progress]="experienceProgress"></app-progress-bar>
       </div>
     </div>
   </div>

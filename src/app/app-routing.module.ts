@@ -16,6 +16,12 @@ const routes: Routes = [
     data:         { showHeader: true, title: 'Skill Tree' },
     resolve:      { header: HeaderResolver },
   },
+  {
+    path:         'quest',
+    loadChildren: () => import('./view/quest/quest.module').then(m => m.QuestModule),
+    data:         { showHeader: true, title: 'Quest' },
+    resolve:      { header: HeaderResolver },
+  },
 
   { path: '**', redirectTo: '' },
 ]

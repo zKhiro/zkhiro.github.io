@@ -1,1 +1,9 @@
-@forward "~bootstrap/scss/bootstrap";
+@use "../abstracts/variables/breakpoints";
+@use "../abstracts/variables/colors";
+
+@forward "~bootstrap/scss/bootstrap" with (
+  $grid-breakpoints: breakpoints.$grid-breakpoints,
+
+  $theme-colors:  colors.$colors-theme,
+  $body-bg:       colors.$dark-magenta,
+);

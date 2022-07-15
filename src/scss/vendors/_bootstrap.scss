@@ -1,10 +1,36 @@
+@use "sass:map";
+
 @use "../abstracts/variables/breakpoints";
 @use "../abstracts/variables/colors";
+@use "../abstracts/variables/typography";
+@use "../abstracts/variables/buttons";
+
 
 @forward "~bootstrap/scss/bootstrap" with (
-  $grid-breakpoints: breakpoints.$grid-breakpoints,
+  $grid-breakpoints:      breakpoints.$grid-breakpoints,
+  $container-max-widths:  breakpoints.$container-max-widths,
 
   $theme-colors:  colors.$colors-theme,
   $body-bg:       colors.$dark-blue,
-  $enable-rfs:    false,
+  $body-color:    colors.$white,
+
+  $font-family-sans-serif:  typography.$font-family-sans-serif,
+  $font-family-monospace:   typography.$font-family-monospace,
+
+  $font-weight-normal:    typography.$font-weight-normal,
+  $headings-font-weight:  typography.$headings-font-weight,
+  $headings-color:        map.get(colors.$colors-theme, "primary"),
+
+  $font-size-root:  #{typography.$font-size-root}px,
+  $font-size-base:  typography.$font-size-base,
+  $h1-font-size:    typography.$h1-font-size,
+  $h2-font-size:    typography.$h2-font-size,
+  $h3-font-size:    typography.$h3-font-size,
+
+  $btn-padding-y:     buttons.$btn-padding-y,
+  $btn-padding-x:     buttons.$btn-padding-x,
+  $btn-font-size:     buttons.$btn-font-size,
+  $btn-border-radius: buttons.$btn-border-radius,
+
+  $enable-rfs: false,
 );

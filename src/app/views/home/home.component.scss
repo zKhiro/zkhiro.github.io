@@ -1,0 +1,10 @@
+@use "functions" as fun;
+
+.header-section {
+  align-self:       flex-end;
+  flex-grow:        1;
+  height:           100vh;
+  justify-content:  space-between;
+  margin-left:      fun.convert-px-to-rem(56);
+  max-height:       fun.convert-px-to-rem(286);
+}

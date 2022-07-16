@@ -24,6 +24,7 @@
     ],
     "paths": {
       "@components": ["src/app/shared/components"],
+      "@directives": ["src/app/shared/directives"],
       "@env": ["src/environment"],
     }
   },

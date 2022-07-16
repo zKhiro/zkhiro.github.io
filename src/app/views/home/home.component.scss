@@ -1,10 +1,27 @@
 @use "functions" as fun;
+@use "mixins";
+
+
+$img-nav-container: 148;
 
 .header-section {
   align-self:       flex-end;
   flex-grow:        1;
   height:           100vh;
   justify-content:  space-between;
-  margin-left:      fun.convert-px-to-rem(56);
   max-height:       fun.convert-px-to-rem(286);
+}
+
+@include mixins.media-breakpoint-down(lg) {
+  .header-section {
+    align-self: initial;
+
+    nav {
+      width: fun.convert-px-to-rem($img-nav-container) !important;
+    }
+  }
+
+  .photo-section {
+    width: fun.convert-px-to-rem($img-nav-container);
+  }
 }

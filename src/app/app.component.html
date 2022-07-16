@@ -1,5 +1,9 @@
-<div class="container d-flex flex-column min-vh-100">
-  <router-outlet></router-outlet>
+<div class="d-flex flex-column vh-100">
+  <div class="overflow-auto h-100">
+    <div class="container d-flex h-100 pb-3">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 
   <app-footer></app-footer>
 </div>

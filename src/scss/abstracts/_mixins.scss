@@ -1,3 +1,6 @@
+@use "~bootstrap/scss/mixins/breakpoints" as bs-breakpoints;
+
+@use "./variables/breakpoints";
 @use "./variables/colors";
 
 
@@ -5,4 +8,22 @@
   background-color:   colors.$dark-blue;
   background-image:   url("/assets/images/noisy-texture.png");
   background-repeat:  repeat;
+}
+
+@mixin media-breakpoint-up($breakpoint) {
+  @include bs-breakpoints.media-breakpoint-up($breakpoint, $breakpoints) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-down($breakpoint) {
+  @include bs-breakpoints.media-breakpoint-down($breakpoint, $breakpoints) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-only($breakpoint) {
+  @include bs-breakpoints.media-breakpoint-only($breakpoint, $breakpoints) {
+    @content;
+  }
 }

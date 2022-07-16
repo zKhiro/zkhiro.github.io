@@ -1,4 +1,6 @@
+@use "../abstracts/mixins";
+
+
 body {
-  background-image:       url("/assets/images/noisy-texture.png");
-  background-repeat:      repeat;
+  @include mixins.noisy-background();
 }

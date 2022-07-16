@@ -1,8 +1,8 @@
-@use "../abstracts/functions" as fun;
+@use "../abstracts/variables/icons";
 
 
 .feather {
-  height:       fun.convert-px-to-rem(20);
+  height:       icons.$size;
   stroke-width: 1px;
-  width:        fun.convert-px-to-rem(20);
+  width:        icons.$size;
 }

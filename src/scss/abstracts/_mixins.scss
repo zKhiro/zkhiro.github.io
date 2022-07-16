@@ -1,0 +1,8 @@
+@use "./variables/colors";
+
+
+@mixin noisy-background() {
+  background-color:   colors.$dark-blue;
+  background-image:   url("/assets/images/noisy-texture.png");
+  background-repeat:  repeat;
+}

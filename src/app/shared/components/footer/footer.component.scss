@@ -1,9 +1,9 @@
-@use "variables/colors";
 @use "functions" as fun;
+@use "mixins";
 
 
 footer {
-  height: fun.convert-px-to-rem(52);
+  height: fun.convert-px-to-rem(54);
 
   hr {
     margin: 0;
@@ -18,4 +18,6 @@ footer {
       margin-left: fun.convert-px-to-rem(12);
     }
   }
+
+  @include mixins.noisy-background();
 }

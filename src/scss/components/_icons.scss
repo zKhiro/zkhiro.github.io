@@ -1,0 +1,8 @@
+@use "../abstracts/functions" as fun;
+
+
+.feather {
+  height:       fun.convert-px-to-rem(20);
+  stroke-width: 1px;
+  width:        fun.convert-px-to-rem(20);
+}

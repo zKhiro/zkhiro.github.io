@@ -10,7 +10,7 @@
   $grid-breakpoints:      breakpoints.$grid-breakpoints,
   $container-max-widths:  breakpoints.$container-max-widths,
 
-  $theme-colors:  colors.$colors-theme,
+  $theme-colors:  colors.$theme,
   $body-bg:       colors.$dark-blue,
   $body-color:    colors.$white,
 
@@ -19,7 +19,7 @@
 
   $font-weight-normal:    typography.$font-weight-normal,
   $headings-font-weight:  typography.$headings-font-weight,
-  $headings-color:        map.get(colors.$colors-theme, "primary"),
+  $headings-color:        map.get(colors.$theme, "primary"),
 
   $font-size-root:  #{typography.$font-size-root}px,
   $font-size-base:  typography.$font-size-base,
@@ -27,10 +27,13 @@
   $h2-font-size:    typography.$h2-font-size,
   $h3-font-size:    typography.$h3-font-size,
 
-  $btn-padding-y:     buttons.$btn-padding-y,
-  $btn-padding-x:     buttons.$btn-padding-x,
-  $btn-font-size:     buttons.$btn-font-size,
-  $btn-border-radius: buttons.$btn-border-radius,
+  $hr-color:    map.get(colors.$theme, "primary"),
+  $hr-opacity:  .5,
+
+  $btn-padding-y:     buttons.$padding-y,
+  $btn-padding-x:     buttons.$padding-x,
+  $btn-font-size:     buttons.$font-size,
+  $btn-border-radius: buttons.$border-radius,
 
   $enable-rfs: false,
 );

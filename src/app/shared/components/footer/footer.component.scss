@@ -1,0 +1,21 @@
+@use "variables/colors";
+@use "functions" as fun;
+
+
+footer {
+  height: fun.convert-px-to-rem(52);
+
+  hr {
+    margin: 0;
+  }
+
+  .icons-section {
+    align-items:  center;
+    align-self:   center;
+    display:      flex;
+
+    > *:not(:first-child) {
+      margin-left: fun.convert-px-to-rem(12);
+    }
+  }
+}

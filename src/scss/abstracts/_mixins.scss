@@ -11,19 +11,19 @@
 }
 
 @mixin media-breakpoint-up($breakpoint) {
-  @include bs-breakpoints.media-breakpoint-up($breakpoint, $breakpoints) {
+  @include bs-breakpoints.media-breakpoint-up($breakpoint, breakpoints.$grid-breakpoints) {
     @content;
   }
 }
 
 @mixin media-breakpoint-down($breakpoint) {
-  @include bs-breakpoints.media-breakpoint-down($breakpoint, $breakpoints) {
+  @include bs-breakpoints.media-breakpoint-down($breakpoint, breakpoints.$grid-breakpoints) {
     @content;
   }
 }
 
 @mixin media-breakpoint-only($breakpoint) {
-  @include bs-breakpoints.media-breakpoint-only($breakpoint, $breakpoints) {
+  @include bs-breakpoints.media-breakpoint-only($breakpoint, breakpoints.$grid-breakpoints) {
     @content;
   }
 }

@@ -1,0 +1,11 @@
+@use "functions" as fun;
+
+
+.back-link {
+  padding: fun.convert-px-to-rem(18) fun.convert-px-to-rem(12);
+
+  .back-icon {
+    height: fun.convert-px-to-rem(48);
+    width:  fun.convert-px-to-rem(48);
+  }
+}

@@ -6,6 +6,7 @@ import { ViewHeightModule } from '@directives';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavbarModule } from './shared/components/navbar/navbar.module';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { AppComponent } from './app.component';
     RouterModule,
 
     FooterModule,
+    NavbarModule,
 
     ViewHeightModule,
   ],

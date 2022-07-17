@@ -15,6 +15,9 @@ const routes: RoutesModel = [
     data: {
       footer: {
         containerClass: 'container',
+      },
+      navbar: {
+        showNavbar: false,
       }
     },
   },
@@ -28,6 +31,10 @@ const routes: RoutesModel = [
     data: {
       footer: {
         containerClass: 'container-fluid',
+      },
+      navbar: {
+        showNavbar: true,
+        title:      'Skill Tree',
       }
     }
   }

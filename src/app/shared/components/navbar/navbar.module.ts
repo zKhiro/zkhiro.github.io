@@ -6,11 +6,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { NavbarComponent } from './navbar.component';
+import { UserComponent } from './user/user.component';
 
 
 @NgModule({
   declarations: [
-    NavbarComponent
+    NavbarComponent,
+    UserComponent
   ],
   imports: [
     CommonModule,

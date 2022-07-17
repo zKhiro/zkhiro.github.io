@@ -17,3 +17,8 @@ footer {
 
   @include mixins.noisy-background();
 }
+
+.footer-icon {
+  height: fun.convert-px-to-rem(22);
+  width:  fun.convert-px-to-rem(22);
+}

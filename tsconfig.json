@@ -4,10 +4,11 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "strictPropertyInitialization": false,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
+    "noPropertyAccessFromIndexSignature": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
@@ -25,6 +26,8 @@
     "paths": {
       "@components": ["src/app/shared/components"],
       "@directives": ["src/app/shared/directives"],
+      "@services": ["src/app/core/services"],
+      "@resolvers": ["src/app/core/resolvers"],
       "@env": ["src/environment"],
     }
   },

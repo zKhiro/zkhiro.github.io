@@ -1,10 +1,8 @@
 <div class="d-flex flex-column" appViewHeight>
   <app-navbar></app-navbar>
 
-  <div class="overflow-auto flex-fill">
-    <div class="container d-flex py-3" [style.min-height.%]="100">
-      <router-outlet></router-outlet>
-    </div>
+  <div class="overflow-auto d-flex py-3 flex-fill">
+    <router-outlet></router-outlet>
   </div>
 
   <app-footer></app-footer>

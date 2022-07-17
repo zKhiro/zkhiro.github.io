@@ -1,28 +1,34 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { NavbarResolver } from '@resolvers';
+import { RouterModule } from '@angular/router';
+import { RoutesModel } from '@models/route.model';
+import { FooterResolver, NavbarResolver } from '@resolvers';
 
 
-const routes: Routes = [
+const routes: RoutesModel = [
   {
     path: '',
     loadChildren: () => import('./views/home/home.module').then(m => m.HomeModule),
     resolve: {
+      footer: FooterResolver,
       navbar: NavbarResolver,
     },
     data: {
-      showNavbar: false,
-    }
+      footer: {
+        containerClass: 'container',
+      }
+    },
   },
   {
     path: 'skill-tree',
     loadChildren: () => import('./views/skill-tree/skill-tree.module').then(m => m.SkillTreeModule),
     resolve: {
+      footer: FooterResolver,
       navbar: NavbarResolver,
     },
     data: {
-      showNavbar: true,
-      title: 'Skill Tree'
+      footer: {
+        containerClass: 'container-fluid',
+      }
     }
   }
 ];

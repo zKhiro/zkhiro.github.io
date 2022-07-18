@@ -1,0 +1,15 @@
+@use "sass:math";
+
+@use "../abstracts/variables/layouts";
+@use "../abstracts/mixins";
+
+
+.container-fluid {
+  padding-left:   layouts.$container-padding-x;
+  padding-right:  layouts.$container-padding-x;
+
+  @include mixins.media-breakpoint-down(md) {
+    padding-left:   math.div(layouts.$container-padding-x, 2);
+    padding-right:  math.div(layouts.$container-padding-x, 2);
+  }
+}

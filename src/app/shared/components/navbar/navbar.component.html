@@ -1,9 +1,11 @@
 <ng-container *ngIf="navbarService.show">
-  <nav class="container-fluid d-flex">
-    <a class="back-link text-primary" [routerLink]="['']">
+  <nav class="container-fluid position-relative">
+    <a class="back-link text-primary position-absolute" [routerLink]="['']">
       <i-feather name="chevron-left" class="back-icon"></i-feather>
     </a>
 
-    <app-user></app-user>
+    <h1 class="flex-fill text-center">{{ navbarService.title }}</h1>
+
+    <hr>
   </nav>
 </ng-container>

@@ -1,14 +1,38 @@
+@use "sass:color";
+@use "sass:map";
+@use "sass:math";
+
+
 $white:         #fff;
-$orange:        #DD4C3C;
+$cinnabar:      #DD4C3C;
 $gray:          #C2C7D6;
-$blue:          #334A99;
 $dark-blue:     #0C1227;
-$dark-magenta:  #AF2858;
+
+// Skill colors
+$dark-magenta:    #AF2858;
+$blue:            #334A99;
+$orange:          #C6670F;
+$cyan:            #29B59B;
+$green:           #62B422;
+$skill-lightness:   90;
+
+$skill-theme: (
+  "active":           $dark-magenta,
+  "passive":          $blue,
+  "tools":            $orange,
+  "management":       $cyan,
+  "data":             $green,
+  "active-light":     lighten($dark-magenta,  $skill-lightness - math.floor(color.lightness($dark-magenta))),
+  "passive-light":    lighten($blue,          $skill-lightness - math.floor(color.lightness($blue))),
+  "tools-light":      lighten($orange,        $skill-lightness - math.floor(color.lightness($orange))),
+  "management-light": lighten($cyan,          $skill-lightness - math.floor(color.lightness($cyan))),
+  "data-light":       lighten($green,         $skill-lightness - math.floor(color.lightness($green))),
+);
 
 $theme: (
-  "primary":      $orange,
+  "primary":      $cinnabar,
   "secondary":    $gray,
-  "blue":         $blue,
   "dark-blue":    $dark-blue,
-  "dark-magenta": $dark-magenta,
 );
+
+$theme: map.merge($theme, $skill-theme);

@@ -1,0 +1,10 @@
+<section
+  class="skill-popover py-3 px-4 position-right position-fixed"
+  [ngClass]="skillService.popoverClass"
+  [style.top.px]="skillService.popoverPosition?.y || 0"
+  [style.left.px]="(skillService.popoverPosition?.right || 0) + 8"
+>
+  <header>
+    <h3 class="skill-title text-center text-reset mb-0">{{ skillService.title }}</h3>
+  </header>
+</section>

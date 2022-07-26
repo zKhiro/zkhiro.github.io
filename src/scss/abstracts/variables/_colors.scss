@@ -17,11 +17,14 @@ $green:           #62B422;
 $skill-lightness:   90;
 
 $skill-theme: (
-  "active":           $dark-magenta,
-  "passive":          $blue,
-  "tools":            $orange,
-  "management":       $cyan,
-  "data":             $green,
+  "active":     $dark-magenta,
+  "passive":    $blue,
+  "tools":      $orange,
+  "management": $cyan,
+  "data":       $green,
+);
+
+$skill-light-theme: (
   "active-light":     lighten($dark-magenta,  $skill-lightness - math.floor(color.lightness($dark-magenta))),
   "passive-light":    lighten($blue,          $skill-lightness - math.floor(color.lightness($blue))),
   "tools-light":      lighten($orange,        $skill-lightness - math.floor(color.lightness($orange))),
@@ -36,3 +39,5 @@ $theme: (
 );
 
 $theme: map.merge($theme, $skill-theme);
+
+$theme: map.merge($theme, $skill-light-theme);

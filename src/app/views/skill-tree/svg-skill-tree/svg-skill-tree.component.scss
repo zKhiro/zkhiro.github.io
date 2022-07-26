@@ -20,8 +20,8 @@ $transition: .12s;
     transition: fill $transition;
   }
 
-  &:hover {
-    transform:        scale(1.05);
+  &:hover, &:focus {
+    transform: scale(1.05);
 
     .skill-badge-wrapper>rect:last-of-type,
     &+ .level-badge>path:last-of-type {
@@ -31,5 +31,9 @@ $transition: .12s;
     .pill-footer {
       fill: $hover-highlight-color;
     }
+  }
+
+  &:focus {
+    outline: none;
   }
 }

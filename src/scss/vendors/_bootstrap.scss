@@ -7,7 +7,7 @@
 @use "../abstracts/variables/buttons";
 
 
-@forward "~bootstrap/scss/bootstrap" with (
+@forward "/node_modules/bootstrap/scss/bootstrap" with (
   $spacer:  layouts.$spacer,
   $spacers: layouts.$spacers,
 

@@ -1,0 +1,24 @@
+@use "functions" as fun;
+@use "mixins";
+
+
+footer {
+  height: fun.convert-px-to-rem(54);
+
+  hr {
+    margin: 0;
+  }
+
+  .icons-section {
+    align-items:  center;
+    align-self:   center;
+    display:      flex;
+  }
+
+  @include mixins.noisy-background();
+}
+
+.footer-icon {
+  height: fun.convert-px-to-rem(22);
+  width:  fun.convert-px-to-rem(22);
+}

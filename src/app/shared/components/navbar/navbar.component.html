@@ -1,0 +1,11 @@
+<ng-container *ngIf="navbarService.show">
+  <nav class="container-fluid d-flex flex-column justify-content-center position-relative">
+    <a class="back-link text-primary position-absolute" [routerLink]="['']">
+      <i-feather name="chevron-left" class="back-icon"></i-feather>
+    </a>
+
+    <h1 class="flex-fill text-center mb-0">{{ navbarService.title }}</h1>
+
+    <hr class="mb-0">
+  </nav>
+</ng-container>

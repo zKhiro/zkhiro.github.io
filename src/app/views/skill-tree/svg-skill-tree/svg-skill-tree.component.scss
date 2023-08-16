@@ -1,0 +1,39 @@
+@use "sass:map";
+
+@use "variables/colors";
+
+
+$hover-highlight-color: map.get(colors.$theme, 'primary');
+$transition: .12s;
+
+.skill-badge {
+  cursor:           pointer;
+  transform-origin: center;
+  transform-box:    fill-box;
+  transition:       transform $transition;
+
+  .skill-badge-wrapper>rect {
+    transition: stroke $transition, filter $transition;
+  }
+
+  .pill-footer {
+    transition: fill $transition;
+  }
+
+  &:hover, &:focus {
+    transform: scale(1.05);
+
+    .skill-badge-wrapper>rect:last-of-type,
+    &+ .level-badge>path:last-of-type {
+      stroke: $hover-highlight-color;
+    }
+
+    .pill-footer {
+      fill: $hover-highlight-color;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

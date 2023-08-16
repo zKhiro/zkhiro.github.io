@@ -1,0 +1,44 @@
+@use "sass:map";
+
+@use "../abstracts/variables/layouts";
+@use "../abstracts/variables/breakpoints";
+@use "../abstracts/variables/colors";
+@use "../abstracts/variables/typography";
+@use "../abstracts/variables/buttons";
+
+
+@forward "~bootstrap/scss/bootstrap" with (
+  $spacer:  layouts.$spacer,
+  $spacers: layouts.$spacers,
+
+  $grid-breakpoints:      breakpoints.$grid-breakpoints,
+  $container-max-widths:  breakpoints.$container-max-widths,
+  $container-padding-x:   layouts.$container-padding-x,
+
+  $theme-colors:  colors.$theme,
+  $body-bg:       colors.$dark-blue,
+  $body-color:    colors.$white,
+
+  $font-family-sans-serif:  typography.$font-family-sans-serif,
+  $font-family-monospace:   typography.$font-family-monospace,
+
+  $font-weight-normal:    typography.$font-weight-normal,
+  $headings-font-weight:  typography.$headings-font-weight,
+  $headings-color:        map.get(colors.$theme, "primary"),
+
+  $font-size-root:  #{typography.$font-size-root}px,
+  $font-size-base:  typography.$font-size-base,
+  $h1-font-size:    typography.$h1-font-size,
+  $h2-font-size:    typography.$h2-font-size,
+  $h3-font-size:    typography.$h3-font-size,
+
+  $hr-color:    map.get(colors.$theme, "primary"),
+  $hr-opacity:  .5,
+
+  $btn-padding-y:     buttons.$padding-y,
+  $btn-padding-x:     buttons.$padding-x,
+  $btn-font-size:     buttons.$font-size,
+  $btn-border-radius: buttons.$border-radius,
+
+  $enable-rfs: false,
+);

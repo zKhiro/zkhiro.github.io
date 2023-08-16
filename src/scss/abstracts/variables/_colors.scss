@@ -3,10 +3,10 @@
 @use "sass:math";
 
 
-$white:         #fff;
-$cinnabar:      #DD4C3C;
-$gray:          #C2C7D6;
-$dark-blue:     #0C1227;
+$white:         #E4E6EC;
+$jasper:        #C84839;
+$gray:          #9498A8;
+$dark-blue:     #161A27;
 
 // Skill colors
 $dark-magenta:    #AF2858;
@@ -33,7 +33,7 @@ $skill-light-theme: (
 );
 
 $theme: (
-  "primary":      $cinnabar,
+  "primary":      $jasper,
   "secondary":    $gray,
   "dark-blue":    $dark-blue,
 );

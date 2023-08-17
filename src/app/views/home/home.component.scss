@@ -1,4 +1,6 @@
 @use "functions" as fun;
+@use "variables/colors";
+@use "variables/buttons";
 @use "mixins";
 
 
@@ -46,5 +48,13 @@ $icon-user-position: 16;
     &:last-of-type {
       margin-bottom: 0;
     }
+  }
+}
+
+a.card {
+  transition: buttons.$link-transition, box-shadow buttons.$link-transition-duration;
+
+  &:hover {
+    box-shadow: 0 0 0 fun.convert-px-to-rem(2) map-get(colors.$theme, "primary");
   }
 }

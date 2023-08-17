@@ -24,7 +24,7 @@
 
   $font-weight-normal:    typography.$font-weight-normal,
   $headings-font-weight:  typography.$headings-font-weight,
-  $headings-color:        map.get(colors.$theme, "primary"),
+  $headings-font-family:  typography.$font-family-monospace,
 
   $font-size-root:  #{typography.$font-size-root}px,
   $font-size-base:  typography.$font-size-base,

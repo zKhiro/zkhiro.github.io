@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  host: { 'class': 'home-container container flex-column flex-lg-row gap-4 gap-lg-6' }
+  host: { 'class': 'home-container container flex-column' }
 })
 export class HomeComponent {}

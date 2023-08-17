@@ -2,26 +2,29 @@
 @use "mixins";
 
 
-$img-nav-container: 148;
+.home-header {
+  margin-top: fun.convert-px-to-rem(110);
 
-.header-section {
-  align-self:       flex-end;
-  flex-grow:        1;
-  height:           100vh;
-  justify-content:  space-between;
-  max-height:       fun.convert-px-to-rem(286);
+  h1 {
+    letter-spacing: fun.convert-px-to-rem(5);
+  }
+
+  h2 {
+    letter-spacing: fun.convert-px-to-rem(2);
+  }
+
+  & > * {
+    line-height: fun.convert-px-to-rem(72);
+  }
+
 }
 
 @include mixins.media-breakpoint-down(lg) {
-  .header-section {
+  .home-header {
     align-self: initial;
-
-    nav {
-      width: fun.convert-px-to-rem($img-nav-container) !important;
-    }
   }
+}
 
-  .photo-section {
-    width: fun.convert-px-to-rem($img-nav-container);
-  }
+.content-section {
+  
 }

@@ -2,8 +2,13 @@
 @use "mixins";
 
 
+$icon-user-size: 228;
+$icon-user-position: 16;
+
+
 .home-header {
-  margin-top: fun.convert-px-to-rem(110);
+  margin-top: auto;
+  max-width: fun.convert-px-to-rem(988);
 
   h1 {
     letter-spacing: fun.convert-px-to-rem(5);
@@ -19,12 +24,36 @@
 
 }
 
-@include mixins.media-breakpoint-down(lg) {
-  .home-header {
-    align-self: initial;
+.content-section {
+  transform: translateY(clamp(20%, 18vh, 75%));
+}
+
+.card {
+  position: relative;
+
+  .card-header {
+    letter-spacing: fun.convert-px-to-rem(2.5);
+  }
+
+  svg {
+    position: absolute;
+
+    &.user {
+      height: fun.convert-px-to-rem($icon-user-size);
+      opacity: .12;
+      right: fun.convert-px-to-rem($icon-user-position);
+      top: fun.convert-px-to-rem($icon-user-position);
+      width: fun.convert-px-to-rem($icon-user-size);
+    }
+  }
+
+  p {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 
-.content-section {
-  
-}
+// a.card {
+//   width: clamp(fun.convert-px-to-rem(120), 50vw, fun.convert-px-to-rem(720));
+// }

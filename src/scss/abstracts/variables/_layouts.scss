@@ -5,8 +5,9 @@ $spacers: (
   2: $spacer * .5,
   3: $spacer,
   4: $spacer * 1.5,
-  5: $spacer * 3,
-  6: $spacer * 4,
+  5: $spacer * 2,
+  6: $spacer * 3,
+  7: $spacer * 4,
 );
 
 $container-padding-x: 3rem; // Bootstrap mutiply this value by .5 which means the padding will be 24px;

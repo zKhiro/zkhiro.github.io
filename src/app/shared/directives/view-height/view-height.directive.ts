@@ -18,7 +18,7 @@ export class ViewHeightDirective implements AfterViewInit {
   }
 
   private applyViewHeight() {
-    this.element.nativeElement.style.height = `${window.innerHeight}px`;
+    this.element.nativeElement.style.minHeight = `${window.innerHeight}px`;
   }
 
 }

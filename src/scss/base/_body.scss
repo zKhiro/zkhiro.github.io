@@ -2,7 +2,5 @@
 
 
 body {
-  overflow: hidden;
-
   @include mixins.noisy-background();
 }

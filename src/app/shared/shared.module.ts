@@ -7,6 +7,7 @@ import { DirectivesModule } from '@directives';
 @NgModule({
   imports: [
     CommonModule,
+
     ComponentsModule,
     DirectivesModule,
   ],

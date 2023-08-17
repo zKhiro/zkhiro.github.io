@@ -1,15 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
-import { ViewHeightModule } from './view-height/view-height.module';
+import { AnimateNumberModule } from './animate-number/animate-number.module';
 
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    AnimateNumberModule,
   ],
   exports: [
-    ViewHeightModule,
+    AnimateNumberModule
   ],
 })
 export class DirectivesModule { }

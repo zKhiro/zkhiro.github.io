@@ -4,12 +4,12 @@
 @use "../abstracts/mixins";
 
 
-.container-fluid {
+.container {
   padding-left:   layouts.$container-padding-x;
   padding-right:  layouts.$container-padding-x;
 
   @include mixins.media-breakpoint-down(md) {
-    padding-left:   math.div(layouts.$container-padding-x, 2);
-    padding-right:  math.div(layouts.$container-padding-x, 2);
+    padding-left:   math.div(layouts.$container-padding-x, 2.6666666666666666);
+    padding-right:  math.div(layouts.$container-padding-x, 2.6666666666666666);
   }
 }

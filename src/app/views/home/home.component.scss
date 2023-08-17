@@ -7,25 +7,20 @@ $icon-user-position: 16;
 
 
 .home-header {
-  margin-top: auto;
+  margin-bottom: fun.convert-px-to-rem(120);
+  margin-top: fun.convert-px-to-rem(120);
   max-width: fun.convert-px-to-rem(988);
 
   h1 {
-    letter-spacing: fun.convert-px-to-rem(5);
+    letter-spacing: clamp(fun.convert-px-to-rem(3.5), 3vw, fun.convert-px-to-rem(5));
+    line-height: clamp(fun.convert-px-to-rem(48), 10vw, fun.convert-px-to-rem(72));
   }
 
   h2 {
-    letter-spacing: fun.convert-px-to-rem(2);
+    letter-spacing: clamp(fun.convert-px-to-rem(1.8), 3vw, fun.convert-px-to-rem(2));
+    line-height: clamp(fun.convert-px-to-rem(24), 5vw, fun.convert-px-to-rem(36));
+    margin-bottom: clamp(fun.convert-px-to-rem(24), 5vw, fun.convert-px-to-rem(36));
   }
-
-  & > * {
-    line-height: fun.convert-px-to-rem(72);
-  }
-
-}
-
-.content-section {
-  transform: translateY(clamp(20%, 18vh, 75%));
 }
 
 .card {
@@ -53,7 +48,3 @@ $icon-user-position: 16;
     }
   }
 }
-
-// a.card {
-//   width: clamp(fun.convert-px-to-rem(120), 50vw, fun.convert-px-to-rem(720));
-// }

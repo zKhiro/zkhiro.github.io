@@ -31,13 +31,6 @@ export class AnimateNumberDirective implements OnChanges {
    */
   @Input() delay = 0;
 
-  /**
-   * Define if value will be increase or decrease.
-   *
-   * @default false // Will Increase
-   */
-  @Input() decrease = false;
-
 
   constructor(
     private element: ElementRef<HTMLElement>,

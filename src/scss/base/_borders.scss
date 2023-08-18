@@ -1,6 +1,0 @@
-@use "../abstracts/variables/borders";
-
-hr {
-  margin-bottom:  borders.$hr-margin-bottom;
-  margin-top:     borders.$hr-margin-top;
-}

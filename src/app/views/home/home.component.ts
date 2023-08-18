@@ -7,4 +7,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss'],
   host: { 'class': 'home-container container flex-column' }
 })
-export class HomeComponent {}
+export class HomeComponent {
+  readonly skills = [
+    'HTML',
+    'CSS',
+    'SASS',
+    'JavaScript',
+    'TypeScript',
+    'Angular',
+    'RxJs',
+    'Figma',
+    'Godot',
+    'LESS',
+    'Firebase',
+    'Vue',
+    'Photoshop',
+    'Blender',
+    'Git',
+    'GraphQL',
+  ]
+}

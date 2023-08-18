@@ -45,28 +45,24 @@
   $enable-rfs: false,
 
   /** Links **/
+
   $link-decoration:   none,
 
 
   /** Cards **/
 
-  // $card-spacer-y:                     $spacer !default,
-  // $card-spacer-x:                     $spacer !default,
-  // $card-title-spacer-y:               $spacer * .5 !default,
-  // $card-title-color:                  null !default,
-  // $card-subtitle-color:               null !default,
   $card-border-width:                 0,
-  // $card-border-color:                 var(--#{$prefix}border-color-translucent) !default,
   $card-border-radius:                fun.convert-px-to-rem(24),
-  // $card-box-shadow:                   null !default,
-  // $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default,
   $card-cap-padding-y:                0,
   $card-cap-padding-x:                0,
   $card-cap-bg:                       transparent,
-  // $card-cap-color:                    null !default,
-  // $card-height:                       null !default,
-  // $card-color:                        null !default,
   $card-bg:                           rgba(255 255 255 / .06),
-  // $card-img-overlay-padding:          $spacer !default,
-  // $card-group-margin:                 $grid-gutter-width * .5 !default,
+
+  /** Badges **/
+
+  $badge-font-size:                   .8em,
+  $badge-font-weight:                 400,
+  $badge-color:                       inherit,
+  $badge-padding-y:                   .35em,
+  $badge-padding-x:                   .65em,
 );

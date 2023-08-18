@@ -26,4 +26,6 @@ export class HomeComponent {
     'Git',
     'GraphQL',
   ];
+
+  currentYear = new Date().getFullYear();
 }

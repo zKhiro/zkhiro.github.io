@@ -8,10 +8,17 @@ import { AnimationFrame } from '@classes';
 export class AnimateNumberDirective implements OnChanges {
 
   /** Number that need to be animated. */
-  @Input() animateNumber = 0;
+  @Input() initialValue = 0;
 
   /**
-   * Duration of the transition between `0` and `animateNumber` value.
+   * Define end value.
+   *
+   * @default 0
+   */
+  @Input() endValue = 0;
+
+  /**
+   * Duration of the transition between `initialValue` and `endValue` value.
    *
    * @default 400
    */
@@ -24,30 +31,18 @@ export class AnimateNumberDirective implements OnChanges {
    */
   @Input() delay = 0;
 
-  /**
-   * Define if value will be increase or decrease.
-   *
-   * @default false // Will Increase
-   */
-  @Input() decrease = false;
-
-  /**
-   * Define end value.
-   *
-   * @default 0
-   */
-  @Input() endValue = 0;
-
 
   constructor(
     private element: ElementRef<HTMLElement>,
   ) { }
 
   ngOnChanges(changes: SimpleChanges): void {
-    const numberAnimation = new AnimationFrame(elapsed => {
-      const elapsedAnimateNumber = Math.floor((this.endValue - this.animateNumber) * elapsed);
+    this.element.nativeElement.innerText = changes.initialValue.currentValue;
 
-      this.element.nativeElement.innerText = (this.animateNumber + elapsedAnimateNumber).toString();
+    const numberAnimation = new AnimationFrame(elapsed => {
+      const elapsedAnimateNumber = Math.floor((this.endValue - changes.initialValue.currentValue) * elapsed);
+
+      this.element.nativeElement.innerText = (changes.initialValue.currentValue + elapsedAnimateNumber).toString();
     }, this.duration, this.delay);
 
     numberAnimation.start();

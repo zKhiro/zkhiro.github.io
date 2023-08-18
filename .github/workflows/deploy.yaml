@@ -9,7 +9,8 @@ jobs:
     name: Deploy Application
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout `master`
+        uses: actions/checkout@v3
       - name: Install Node
         uses: actions/setup-node@v2
         with:

@@ -25,5 +25,5 @@ export class HomeComponent {
     'Blender',
     'Git',
     'GraphQL',
-  ]
+  ];
 }

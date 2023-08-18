@@ -2,7 +2,8 @@ name: Deploy Github Pages
 
 on:
   push:
-    branches: ["*"]
+    branches:
+      - master
 
 jobs:
   deploy:
@@ -21,7 +22,7 @@ jobs:
         npm ci
         npm run build:prod
 
-    - name: GitHub Pages action
+    - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}

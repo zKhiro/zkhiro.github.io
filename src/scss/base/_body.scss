@@ -1,0 +1,6 @@
+@use "../abstracts/mixins";
+
+
+body {
+  @include mixins.noisy-background();
+}

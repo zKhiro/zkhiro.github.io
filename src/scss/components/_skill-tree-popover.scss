@@ -1,0 +1,12 @@
+.skill-tree-popover {
+  pointer-events:   none;
+  transition:       opacity .15s;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  &.invisible {
+    opacity: 0;
+  }
+}

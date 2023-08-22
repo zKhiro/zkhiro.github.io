@@ -1,13 +1,23 @@
 @use "functions" as fun;
 @use "variables/colors";
 @use "variables/buttons";
-@use "mixins";
 
 
 $icon-user-size: 228;
 $icon-skill-size: 147;
 $icon-user-position: 16;
 
+$animation-duration: .8s;
+
+
+@mixin animation-fade-in($delay: 0s) {
+  animation-duration: $animation-duration;
+  animation-delay: $delay;
+  animation-name: fade-in;
+  animation-fill-mode: forwards;
+
+  opacity: 0;
+}
 
 .home-header {
   margin-bottom: 25vh;
@@ -17,12 +27,16 @@ $icon-user-position: 16;
   h1 {
     letter-spacing: clamp(fun.convert-px-to-rem(3.5), 3vw, fun.convert-px-to-rem(5));
     line-height: clamp(fun.convert-px-to-rem(48), 10vw, fun.convert-px-to-rem(72));
+
+    @include animation-fade-in($animation-duration * .5);
   }
 
   h2 {
     letter-spacing: clamp(fun.convert-px-to-rem(1.8), 3vw, fun.convert-px-to-rem(2));
     line-height: clamp(fun.convert-px-to-rem(24), 5vw, fun.convert-px-to-rem(36));
     margin-bottom: clamp(fun.convert-px-to-rem(24), 5vw, fun.convert-px-to-rem(36));
+
+    @include animation-fade-in(.2s);
   }
 }
 
@@ -83,4 +97,21 @@ a.card {
       }
     }
   }
+}
+
+.left-column {
+  @include animation-fade-in($animation-duration);
+}
+
+.right-column {
+  @for $i from 1 through 3 {
+    &>.card:nth-child(#{$i}n) {
+      @include animation-fade-in($animation-duration + .5 * ($i * .45));
+    }
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

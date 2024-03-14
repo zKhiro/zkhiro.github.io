@@ -2,6 +2,7 @@
 @use "variables/colors";
 @use "variables/buttons";
 
+$card-quatity: 4;
 
 $icon-user-size: 228;
 $icon-skill-size: 147;
@@ -126,7 +127,7 @@ a {
 }
 
 .right-column {
-  @for $i from 1 through 3 {
+  @for $i from 1 through $card-quatity {
     &>.card:nth-child(#{$i}n) {
       @include animation-fade-in($animation-duration + .5 * ($i * .45));
     }

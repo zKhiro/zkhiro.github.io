@@ -8,6 +8,10 @@ h2, .h2, h1, .h1 {
   letter-spacing: .06em;
 }
 
+p {
+  letter-spacing: .02em;
+}
+
 .text-regular {
   font-family: typography.$font-family-sans-serif;
 }

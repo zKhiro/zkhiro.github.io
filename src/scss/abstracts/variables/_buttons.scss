@@ -9,4 +9,4 @@ $font-size: typography.$h3-font-size;
 $border-radius: .5rem;
 
 $link-transition-duration: .15s;
-$link-transition: background-image $link-transition-duration;
+$link-transition: color $link-transition-duration, background-image $link-transition-duration;

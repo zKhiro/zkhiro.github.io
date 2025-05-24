@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   host: { 'class': 'home-container container flex-column' }
 })
 export class HomeComponent {
-  readonly skills = [
+  readonly Skills = [
     'HTML',
     'CSS',
     'SASS',
@@ -27,6 +27,13 @@ export class HomeComponent {
     'Git',
     'GraphQL',
   ];
+
+  readonly Projects = [
+    {
+      name: "Github Search",
+      link: "https://leandro-github-search.vercel.app"
+    }
+  ]
 
   currentYear = new Date().getFullYear();
 }

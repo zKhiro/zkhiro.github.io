@@ -90,16 +90,35 @@ a {
     }
   }
 
-  &.link.flag {
-    border-radius: fun.convert-px-to-rem(4);
-    opacity: .5;
-    overflow: hidden;
-    width: fun.convert-px-to-rem(43);
+  &.link {
+    letter-spacing: .1em;
 
-    transition: buttons.$link-transition-duration;
+    svg {
+      height: 100%;
+      left: 0;
+      opacity: .2;
+      position: absolute;
+
+      transition: opacity buttons.$link-transition-duration;
+    }
+
+    &.flag {
+      border-radius: fun.convert-px-to-rem(4);
+      opacity: .5;
+      overflow: hidden;
+      width: fun.convert-px-to-rem(43);
+
+      transition: buttons.$link-transition-duration;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
 
     &:hover {
-      opacity: 1;
+      svg {
+        opacity: .3;
+      }
     }
   }
 }

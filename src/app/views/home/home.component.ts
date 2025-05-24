@@ -21,6 +21,7 @@ export class HomeComponent {
     'LESS',
     'Firebase',
     'Vue',
+    'React',
     'Photoshop',
     'Blender',
     'Git',

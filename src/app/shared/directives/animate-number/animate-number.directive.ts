@@ -3,7 +3,8 @@ import { AnimationFrame } from '@classes';
 
 
 @Directive({
-  selector: '[animateNumber]',
+    selector: '[animateNumber]',
+    standalone: false
 })
 export class AnimateNumberDirective implements OnChanges {
 

@@ -42,7 +42,9 @@
       </svg>
 
       <ul class="d-flex fs-5">
-        <li *ngFor="let skill of Skills" class="badge">{{ skill }}</li>
+        @for (skill of Skills; track skill) {
+          <li class="badge">{{ skill }}</li>
+        }
       </ul>
     </div>
   </section>
@@ -53,7 +55,7 @@
       class="card px-5 py-3"
       href="https://www.linkedin.com/in/leandro-matias/"
       target="_blank"
-    >
+      >
       <h3 class="tag">Experience</h3>
       <p class="text-secondary">See my Linkedin profile.</p>
     </a>
@@ -62,7 +64,7 @@
       class="card px-5 py-3"
       href="https://github.com/zKhiro"
       target="_blank"
-    >
+      >
       <h3 class="tag">Github</h3>
       <p class="text-secondary">See my repositories and contributions.</p>
     </a>
@@ -71,49 +73,49 @@
       class="card px-5 py-3"
       href="https://codepen.io/zkhiro"
       target="_blank"
-    >
+      >
       <h3 class="tag">CodePen</h3>
       <p class="text-secondary">See my pens.</p>
     </a>
 
     <!-- <div class="card download px-5 py-3">
-      <h3 class="tag">Resume</h3>
-      <p class="text-secondary mb-2">Choose the language:</p>
+    <h3 class="tag">Resume</h3>
+    <p class="text-secondary mb-2">Choose the language:</p>
 
-      <div class="d-flex gap-4">
-        <a
-          class="link flag"
-          href="assets/resume/Leandro Matias Baldo PT-BR.pdf"
-          target="_blank"
+    <div class="d-flex gap-4">
+      <a
+        class="link flag"
+        href="assets/resume/Leandro Matias Baldo PT-BR.pdf"
+        target="_blank"
         >
-          <img src="assets/images/flags/br.svg" alt="brazilian flag">
-        </a>
-
-        <a
-          class="link flag"
-          href="assets/resume/Leandro Matias Baldo EN.pdf"
-          target="_blank"
-        >
-          <img src="assets/images/flags/us.svg" alt="United State of America flag">
-        </a>
-      </div>
-    </div> -->
-
-    <div class="card p-5 flex-fill">
-      <h3 class="tag mb-5">Hosted Projects</h3>
+        <img src="assets/images/flags/br.svg" alt="brazilian flag">
+      </a>
 
       <a
-        *ngFor="let project of Projects"
+        class="link flag"
+        href="assets/resume/Leandro Matias Baldo EN.pdf"
+        target="_blank"
+        >
+        <img src="assets/images/flags/us.svg" alt="United State of America flag">
+      </a>
+    </div>
+  </div> -->
+
+  <div class="card p-5 flex-fill">
+    <h3 class="tag mb-5">Hosted Projects</h3>
+
+    @for (project of Projects; track project) {
+      <a
         class="card link text-center p-3 col-lg-6"
         target="_blank"
         [href]="project.link"
-      >
+        >
         <span class="position-relative">
           {{ project.name }}
-
           <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <path d="M9 2H5v2H3v2H1v6h2v2h2v2h2v2h2v2h2v2h2v-2h2v-2h2v-2h2v-2h2v-2h2V6h-2V4h-2V2h-4v2h-2v2h-2V4H9V2zm0 2v2h2v2h2V6h2V4h4v2h2v6h-2v2h-2v2h-2v2h-2v2h-2v-2H9v-2H7v-2H5v-2H3V6h2V4h4z" fill="currentColor"/> </svg>
         </span>
       </a>
-    </div>
-  </section>
+    }
+  </div>
+</section>
 </section>

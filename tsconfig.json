@@ -15,7 +15,7 @@
     "sourceMap": true,
     "declaration": false,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
     "module": "es2020",
@@ -25,13 +25,27 @@
     ],
     "useDefineForClassFields": false,
     "paths": {
-      "@components": ["src/app/shared/components"],
-      "@directives": ["src/app/shared/directives"],
-      "@services": ["src/app/core/services"],
-      "@resolvers": ["src/app/core/resolvers"],
-      "@models/*": ["src/app/core/models/*"],
-      "@classes": ["src/app/core/classes"],
-      "@env": ["src/environment"],
+      "@components": [
+        "src/app/shared/components"
+      ],
+      "@directives": [
+        "src/app/shared/directives"
+      ],
+      "@services": [
+        "src/app/core/services"
+      ],
+      "@resolvers": [
+        "src/app/core/resolvers"
+      ],
+      "@models/*": [
+        "src/app/core/models/*"
+      ],
+      "@classes": [
+        "src/app/core/classes"
+      ],
+      "@env": [
+        "src/environment"
+      ]
     }
   },
   "angularCompilerOptions": {

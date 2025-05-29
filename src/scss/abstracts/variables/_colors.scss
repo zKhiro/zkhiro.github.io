@@ -24,14 +24,6 @@ $skill-theme: (
   "data":       $green,
 );
 
-$skill-light-theme: (
-  "active-light":     lighten($dark-magenta,  $skill-lightness - math.floor(color.lightness($dark-magenta))),
-  "passive-light":    lighten($blue,          $skill-lightness - math.floor(color.lightness($blue))),
-  "tools-light":      lighten($orange,        $skill-lightness - math.floor(color.lightness($orange))),
-  "management-light": lighten($cyan,          $skill-lightness - math.floor(color.lightness($cyan))),
-  "data-light":       lighten($green,         $skill-lightness - math.floor(color.lightness($green))),
-);
-
 $theme: (
   "primary":      $jasper,
   "secondary":    $gray,
@@ -39,5 +31,3 @@ $theme: (
 );
 
 $theme: map.merge($theme, $skill-theme);
-
-$theme: map.merge($theme, $skill-light-theme);

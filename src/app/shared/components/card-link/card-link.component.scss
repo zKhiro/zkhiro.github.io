@@ -1,0 +1,23 @@
+@use "sass:map";
+
+@use "functions" as fun;
+@use "variables/colors";
+@use "variables/buttons";
+
+
+a {
+  transition: buttons.$link-transition, box-shadow buttons.$link-transition-duration;
+
+  &:hover {
+    box-shadow: 0 0 0 fun.convert-px-to-rem(2) map.get(colors.$theme, "primary");
+
+    .icon {
+      color: colors.$gray;
+    }
+  }
+}
+
+.icon {
+  transition: buttons.$link-transition;
+  width: fun.convert-px-to-rem(32);
+}

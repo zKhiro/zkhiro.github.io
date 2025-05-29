@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { CardLinkComponent } from '@components';
 import { AnimateNumberModule } from '@directives';
 
 import { HomeRoutingModule } from './home-routing.module';
@@ -9,7 +10,7 @@ import { HomeComponent } from './home.component';
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     CommonModule,
@@ -18,6 +19,8 @@ import { HomeComponent } from './home.component';
     HomeRoutingModule,
 
     AnimateNumberModule,
+
+    CardLinkComponent,
   ]
 })
 export class HomeModule { }

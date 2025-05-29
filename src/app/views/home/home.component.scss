@@ -1,10 +1,12 @@
+@use "sass:map";
+
 @use "functions" as fun;
 @use "variables/colors";
 @use "variables/buttons";
 
 $card-quatity: 4;
 
-$icon-user-size: 228;
+$icon-user-size: 150;
 $icon-skill-size: 147;
 $icon-user-position: 16;
 
@@ -56,6 +58,7 @@ $animation-duration: .8s;
       height: fun.convert-px-to-rem($icon-user-size);
       right: fun.convert-px-to-rem($icon-user-position);
       top: fun.convert-px-to-rem($icon-user-position);
+      transform: rotateZ(-45deg);
       width: fun.convert-px-to-rem($icon-user-size);
     }
 
@@ -82,14 +85,6 @@ $animation-duration: .8s;
 }
 
 a {
-  &.card {
-    transition: buttons.$link-transition, box-shadow buttons.$link-transition-duration;
-
-    &:hover {
-      box-shadow: 0 0 0 fun.convert-px-to-rem(2) map-get(colors.$theme, "primary");
-    }
-  }
-
   &.link {
     letter-spacing: .1em;
 
@@ -147,7 +142,7 @@ a {
 
 .right-column {
   @for $i from 1 through $card-quatity {
-    &>.card:nth-child(#{$i}n) {
+    &>*:nth-child(#{$i}n) {
       @include animation-fade-in($animation-duration + .5 * ($i * .45));
     }
   }

@@ -6,9 +6,8 @@
 
 $card-quatity: 4;
 
-$icon-user-size: 150;
-$icon-skill-size: 147;
-$icon-user-position: 16;
+$icon-size: fun.convert-px-to-rem(150);
+$icon-position: fun.convert-px-to-rem(32);
 
 $animation-duration: .8s;
 
@@ -53,20 +52,18 @@ $animation-duration: .8s;
   .icon {
     opacity: .08;
     position: absolute;
+    right: $icon-position;
+    top: $icon-position;
 
     &.user {
-      height: fun.convert-px-to-rem($icon-user-size);
-      right: fun.convert-px-to-rem($icon-user-position);
-      top: fun.convert-px-to-rem($icon-user-position);
+      height: $icon-size;
       transform: rotateZ(-45deg);
-      width: fun.convert-px-to-rem($icon-user-size);
+      width: $icon-size;
     }
 
     &.skill {
-      height: fun.convert-px-to-rem($icon-skill-size);
-      right: fun.convert-px-to-rem(32);
-      top: fun.convert-px-to-rem(32);
-      width: fun.convert-px-to-rem($icon-skill-size);
+      height: $icon-size;
+      width: $icon-size;
     }
   }
 

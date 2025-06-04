@@ -1,0 +1,22 @@
+{
+  "HOME": {
+    "PRESENTATION": {
+      "HEADER": "I’m Leandro, breathing web since"
+    },
+    "ABOUT_ME": {
+      "HEADER": "About Me",
+      "P": [
+        "I've been fascinated by technologies and arts since childhood.",
+        "I feel motivated when I'm creative. I love working with CSS, especially creating animations.",
+        "In everything I'm involved with, I desire to pay extra attention to quality, whether it's in terms of what could be better in usability for the user or in code, making it more scalable and applying concepts like KISS, YAGNI, DRY and when finishing a task always validate through a devbox. ",
+        "Teamwork is a practice I contemplate. I enjoy being able to help and be helped, which leads me to adopt pair programming practices when I'm blocked or to help someone. "
+      ]
+    },
+    "SKILL": {
+      "HEADER": "Skills"
+    },
+    "LINKEDIN": "See my LinkedIn profile.",
+    "GITHUB": "See my repositories and contributions.",
+    "CODEPEN": "See my experiments on CodePen."
+  }
+}

@@ -1,4 +1,22 @@
-<main class="overflow-auto d-flex flex-fill" appViewHeight>
+<main class="overflow-auto d-flex flex-column flex-fill" appViewHeight>
+  <section class="d-flex gap-3 ms-auto pt-2 pe-2 fixed-top justify-content-end">
+    <span>Lang </span>
+    <form>
+      <input
+        class="lang-radio"
+        type="radio"
+        value="pt"
+        [formControl]="langControl"
+      />
+      <input
+        class="lang-radio ms-1"
+        type="radio"
+        value="en"
+        [formControl]="langControl"
+      />
+    </form>
+  </section>
+
   <router-outlet></router-outlet>
 </main>
 

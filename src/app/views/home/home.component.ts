@@ -1,4 +1,10 @@
-import { Component } from '@angular/core';
+import { Observable, Subscription } from 'rxjs';
+
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { LinksModel } from '@models/content.model';
+import { HomeViewLocale } from '@models/locale.model';
+import { ContentService, LocaleService } from '@services';
 
 
 @Component({
@@ -8,27 +14,9 @@ import { Component } from '@angular/core';
     host: { 'class': 'home-container container flex-column' },
     standalone: false
 })
-export class HomeComponent {
-  readonly Skills = [
-    'HTML',
-    'CSS',
-    'SASS',
-    'JavaScript',
-    'TypeScript',
-    'Angular',
-    'RxJs',
-    'Figma',
-    'Godot',
-    'LESS',
-    'Firebase',
-    'Vue',
-    'React',
-    'Photoshop',
-    'Blender',
-    'Git',
-    'GraphQL',
-  ];
-
+export class HomeComponent implements OnInit, OnDestroy {
+  readonly Skills$: Observable<Array<String>> = this.contentService.getSkill();
+  readonly Links$: Observable<Array<LinksModel>> = this.contentService.getLinks();
   readonly Projects = [
     {
       name: "Github Search",
@@ -37,4 +25,31 @@ export class HomeComponent {
   ]
 
   currentYear = new Date().getFullYear();
+
+  homeViewLocale: HomeViewLocale
+
+  localeChangedSubs: Subscription
+
+
+  constructor(
+    private readonly activatedRoute: ActivatedRoute,
+    private readonly localeService: LocaleService,
+    readonly contentService: ContentService,
+  ) {}
+
+  ngOnInit(): void {
+    this.activatedRoute.data.subscribe(data => {
+      this.homeViewLocale = data.locale;
+
+      this.localeChangedSubs = this.localeService.LocaleChanged.subscribe(() => {
+        this.localeService.getViewTranslation().subscribe(locale => this.homeViewLocale = locale);
+      });
+    });
+  }
+
+  ngOnDestroy(): void {
+    if (this.localeChangedSubs) {
+      this.localeChangedSubs.unsubscribe()
+    }
+  }
 }

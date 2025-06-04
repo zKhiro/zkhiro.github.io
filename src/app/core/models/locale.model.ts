@@ -1,0 +1,24 @@
+export type LocaleLangType = "en" | "pt";
+
+export type ViewLocaleKey = keyof LocaleContentModel;
+export type HomeViewLinksKey = keyof Pick<HomeViewLocale, "CODEPEN" | "GITHUB" | "LINKEDIN">
+
+
+export interface LocaleContentHeaderModel { HEADER: string; }
+export interface LocaleContentPModel { P: Array<string>; }
+
+export type LocaleContentType = LocaleContentHeaderModel & LocaleContentPModel;
+export type LocaleResolverType = HomeViewLocale;
+
+export interface LocaleContentModel {
+  HOME: HomeViewLocale
+}
+
+export interface HomeViewLocale {
+  PRESENTATION: LocaleContentHeaderModel;
+  ABOUT_ME: LocaleContentType
+  SKILL: LocaleContentHeaderModel;
+  LINKEDIN: string;
+  GITHUB: string;
+  CODEPEN: string;
+}

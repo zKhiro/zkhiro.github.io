@@ -31,6 +31,9 @@
       "@directives": [
         "src/app/shared/directives"
       ],
+      "@utils": [
+        "src/app/shared/utils"
+      ],
       "@services": [
         "src/app/core/services"
       ],

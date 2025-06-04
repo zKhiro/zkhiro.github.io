@@ -17,9 +17,21 @@
   $container-max-widths:  breakpoints.$container-max-widths,
   $container-padding-x:   layouts.$container-padding-x,
 
+  $primary:       map.get(colors.$theme, "primary"),
+  $secondary:     map.get(colors.$theme, "secondary"),
+  $success:       map.get(colors.$theme, "primary"),
+  $info:          map.get(colors.$theme, "terdiary"),
+  $warning:       map.get(colors.$theme, "primary"),
+  $danger:        map.get(colors.$theme, "primary"),
+  $light:         map.get(colors.$theme, "primary"),
+  $dark:          map.get(colors.$theme, "dark"),
+
   $theme-colors:  colors.$theme,
-  $body-bg:       colors.$dark-blue,
+  $body-bg:       map.get(colors.$theme, "dark"),
   $body-color:    colors.$white,
+
+  $body-secondary-color:  map.get(colors.$theme, "tertiary"),
+  $body-secondary-bg:     map.get(colors.$theme, "bg-light"),
 
   $font-family-sans-serif:  typography.$font-family-sans-serif,
   $font-family-monospace:   typography.$font-family-monospace,
@@ -56,7 +68,7 @@
   $card-cap-padding-y:                0,
   $card-cap-padding-x:                0,
   $card-cap-bg:                       transparent,
-  $card-bg:                           rgba(255 255 255 / .06),
+  $card-bg:                           map.get(colors.$theme, "bg-light"),
 
   /** Badges **/
 

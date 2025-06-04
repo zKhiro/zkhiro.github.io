@@ -5,7 +5,7 @@
 
 
 .icon {
-  color: #484C5A;
+  color: map.get(colors.$theme, "primary");
 }
 
 .tag {

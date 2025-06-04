@@ -3,10 +3,11 @@
 @use "sass:math";
 
 
-$white:         #E4E6EC;
-$jasper:        #C84839;
-$gray:          #9498A8;
-$dark-blue:     #161A27;
+$white:           #E4E6EC;
+$jasper:          #CC4535;
+$palatinate-blue: #4535CC;
+$cool-gray:       #9498A8;
+$raisin-black:    #181C25;
 
 // Skill colors
 $dark-magenta:    #AF2858;
@@ -26,8 +27,10 @@ $skill-theme: (
 
 $theme: (
   "primary":      $jasper,
-  "secondary":    $gray,
-  "dark-blue":    $dark-blue,
+  "secondary":    $palatinate-blue,
+  "tertiary":     $cool-gray,
+  "dark":         $raisin-black,
+  "bg-light":     hsla(223, 70%, 62%, 0.06)
 );
 
 $theme: map.merge($theme, $skill-theme);

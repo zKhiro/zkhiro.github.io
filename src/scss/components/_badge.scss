@@ -1,0 +1,23 @@
+@use "sass:map";
+
+@use "../abstracts/variables/colors";
+
+
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.badge {
+  background-color: map.get(colors.$theme, "bg-light");
+  cursor: default;
+  display: inline-flex;
+
+  &:nth-child(odd) {
+    background-color: rgba(map.get(colors.$theme, "bg-light"), .12);
+  }
+}

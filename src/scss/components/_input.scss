@@ -1,0 +1,37 @@
+@use "sass:color";
+@use "sass:map";
+
+@use "../abstracts/variables/colors";
+@use "../abstracts/functions" as fun;
+
+
+.lang-radio {
+  appearance: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: fun.convert-px-to-rem(4);
+  cursor: pointer;
+  height: 1.5rem;
+
+  &+label {
+    color: map.get(colors.$theme, "tertiary");
+    cursor: pointer;
+    padding-top: fun.convert-px-to-rem(3);
+    transition: color .2s;
+  }
+
+  &:hover {
+    &+label {
+      color: colors.$white;
+    }
+  }
+
+  &:checked {
+    &+label {
+      color: map.get(colors.$theme, "primary");
+      cursor: default;
+
+      font-weight: 700;
+    }
+  }
+}

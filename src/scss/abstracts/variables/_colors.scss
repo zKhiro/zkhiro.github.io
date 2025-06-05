@@ -3,10 +3,11 @@
 @use "sass:math";
 
 
-$white:         #E4E6EC;
-$jasper:        #C84839;
-$gray:          #9498A8;
-$dark-blue:     #161A27;
+$white:           #E4E6EC;
+$jasper:          #CC4535;
+$palatinate-blue: #4535CC;
+$cool-gray:       #9498A8;
+$raisin-black:    #181C25;
 
 // Skill colors
 $dark-magenta:    #AF2858;
@@ -24,20 +25,17 @@ $skill-theme: (
   "data":       $green,
 );
 
-$skill-light-theme: (
-  "active-light":     lighten($dark-magenta,  $skill-lightness - math.floor(color.lightness($dark-magenta))),
-  "passive-light":    lighten($blue,          $skill-lightness - math.floor(color.lightness($blue))),
-  "tools-light":      lighten($orange,        $skill-lightness - math.floor(color.lightness($orange))),
-  "management-light": lighten($cyan,          $skill-lightness - math.floor(color.lightness($cyan))),
-  "data-light":       lighten($green,         $skill-lightness - math.floor(color.lightness($green))),
-);
-
 $theme: (
   "primary":      $jasper,
-  "secondary":    $gray,
-  "dark-blue":    $dark-blue,
+  "secondary":    $palatinate-blue,
+  "tertiary":     $cool-gray,
+  "dark":         $raisin-black,
+  "bg-light":     rgba(90, 129, 226, 0.06),
 );
 
-$theme: map.merge($theme, $skill-theme);
-
-$theme: map.merge($theme, $skill-light-theme);
+$theme-opacity: (
+  "primary-020": rgba(map.get($theme, "primary"), .2),
+  "primary-050": rgba(map.get($theme, "primary"), .5),
+  "secondary-020": rgba(map.get($theme, "secondary"), .2),
+  "secondary-050": rgba(map.get($theme, "secondary"), .5),
+);

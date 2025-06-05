@@ -1,4 +1,6 @@
+import { provideHttpClient } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ViewHeightModule } from '@directives';
@@ -14,9 +16,13 @@ import { AppComponent } from './app.component';
   imports: [
     AppRoutingModule,
     BrowserModule,
+    ReactiveFormsModule,
     RouterModule,
 
     ViewHeightModule,
+  ],
+  providers: [
+    provideHttpClient(),
   ],
   bootstrap: [AppComponent]
 })

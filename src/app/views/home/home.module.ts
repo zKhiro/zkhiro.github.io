@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
+import { provideHttpClient } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { CardLinkComponent, CardProjectComponent, ToastComponent } from '@components';
 import { AnimateNumberModule } from '@directives';
 
 import { HomeRoutingModule } from './home-routing.module';
@@ -9,7 +11,7 @@ import { HomeComponent } from './home.component';
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     CommonModule,
@@ -18,6 +20,13 @@ import { HomeComponent } from './home.component';
     HomeRoutingModule,
 
     AnimateNumberModule,
+
+    CardLinkComponent,
+    CardProjectComponent,
+    ToastComponent,
+  ],
+  providers: [
+    provideHttpClient(),
   ]
 })
 export class HomeModule { }

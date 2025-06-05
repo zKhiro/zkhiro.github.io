@@ -1,12 +1,14 @@
+@use "sass:map";
+
 @use "functions" as fun;
 @use "variables/colors";
 @use "variables/buttons";
 
-$card-quatity: 4;
+$links-quantity: 3;
+$projects-quantity: 1;
 
-$icon-user-size: 228;
-$icon-skill-size: 147;
-$icon-user-position: 16;
+$icon-size: fun.convert-px-to-rem(150);
+$icon-position: fun.convert-px-to-rem(32);
 
 $animation-duration: .8s;
 
@@ -18,6 +20,14 @@ $animation-duration: .8s;
   animation-fill-mode: forwards;
 
   opacity: 0;
+}
+
+@mixin loop-animation($quantity, $multi: .25) {
+  @for $i from 1 through $quantity {
+    &>*:nth-child(#{$i}n) {
+      @include animation-fade-in($animation-duration + $multi * ($i * .45));
+    }
+  }
 }
 
 .home-header {
@@ -39,6 +49,8 @@ $animation-duration: .8s;
 
     @include animation-fade-in(.2s);
   }
+
+  button { @include animation-fade-in($animation-duration * .75); }
 }
 
 .card {
@@ -49,25 +61,26 @@ $animation-duration: .8s;
   }
 
   .icon {
-    opacity: .15;
+    opacity: .08;
     position: absolute;
+    right: $icon-position;
+    top: $icon-position;
 
     &.user {
-      height: fun.convert-px-to-rem($icon-user-size);
-      right: fun.convert-px-to-rem($icon-user-position);
-      top: fun.convert-px-to-rem($icon-user-position);
-      width: fun.convert-px-to-rem($icon-user-size);
+      height: $icon-size;
+      transform: rotateZ(-45deg);
+      width: $icon-size;
     }
 
     &.skill {
-      height: fun.convert-px-to-rem($icon-skill-size);
-      right: fun.convert-px-to-rem(32);
-      top: fun.convert-px-to-rem(32);
-      width: fun.convert-px-to-rem($icon-skill-size);
+      height: $icon-size;
+      width: $icon-size;
     }
   }
 
   p {
+    z-index: 1;
+
     &:last-of-type {
       margin-bottom: 0;
     }
@@ -82,14 +95,6 @@ $animation-duration: .8s;
 }
 
 a {
-  &.card {
-    transition: buttons.$link-transition, box-shadow buttons.$link-transition-duration;
-
-    &:hover {
-      box-shadow: 0 0 0 fun.convert-px-to-rem(2) map-get(colors.$theme, "primary");
-    }
-  }
-
   &.link {
     letter-spacing: .1em;
 
@@ -123,34 +128,19 @@ a {
   }
 }
 
-.skill-list {
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 0;
-
-    .badge {
-      display: inline-flex;
-      background-color: rgba(map-get(colors.$theme, "secondary"), .5);
-
-      &:nth-child(odd) {
-        background-color: rgba(map-get(colors.$theme, "secondary"), .25);
-      }
-    }
-  }
-}
-
 .left-column {
   @include animation-fade-in($animation-duration);
 }
 
 .right-column {
-  @for $i from 1 through $card-quatity {
-    &>.card:nth-child(#{$i}n) {
-      @include animation-fade-in($animation-duration + .5 * ($i * .45));
-    }
-  }
+  @include loop-animation($links-quantity);
+}
+
+.section-projects {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include loop-animation($projects-quantity, .5);
 }
 
 @keyframes fade-in {

@@ -1,0 +1,48 @@
+@use "sass:map";
+
+@use "functions" as fun;
+@use "mixins";
+@use "variables/colors";
+
+
+.card {
+  background-size: 0;
+  height: fun.convert-px-to-rem(420);
+  overflow: hidden;
+
+  &::before {
+    background-image: inherit;
+    background-position: center;
+    background-size: cover;
+    content: '';
+    height: 100%;
+    opacity: .14;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: transform .2s, opacity .2s;
+    width: 100%;
+  }
+
+  @include mixins.after-highlight-on-hover(map.get(colors.$theme, "primary"), .25);
+
+  &> * {
+    z-index: 1;
+  }
+
+  &:hover {
+    &::before {
+      opacity: .3;
+      transform: scale(1.01);
+    }
+
+    .icon {
+      opacity: 1;
+    }
+  }
+}
+
+.icon {
+  width: fun.convert-px-to-rem(32);
+  transition: opacity .2s;
+}

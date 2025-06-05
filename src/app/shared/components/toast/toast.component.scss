@@ -1,0 +1,24 @@
+@use "sass:map";
+
+@use "mixins";
+@use "variables/colors";
+
+
+.toast {
+  @include mixins.neon-drop-shadow(rgba(map.get(colors.$theme, "secondary"), .12));
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(2rem);
+  transition: ease-in-out .15s opacity, ease-in-out .1s transform;
+
+  &.show {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+
+  &:not(.show) {
+    display: block !important;
+  }
+}

@@ -1,0 +1,27 @@
+@use "sass:map";
+
+@use "functions" as fun;
+@use "mixins";
+@use "variables/colors";
+@use "variables/buttons";
+
+
+a {
+  border-radius: fun.convert-px-to-rem(24);
+  overflow: hidden;
+
+  .icon { transition: opacity .2s; }
+
+  @include mixins.before-highlight-on-hover(map.get(colors.$theme, "primary"));
+
+  &:hover {
+    .icon {
+      opacity: 1;
+    }
+  }
+}
+
+.icon {
+  transition: buttons.$link-transition;
+  width: fun.convert-px-to-rem(32);
+}

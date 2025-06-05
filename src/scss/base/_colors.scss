@@ -1,0 +1,12 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables/colors";
+
+
+@each $name, $value in colors.$theme-opacity {
+  .bg-#{$name} { background-color: $value !important; }
+  .text-#{$name} { color: $value !important; }
+}
+
+@each $name, $value in colors.$theme {
+  .neon-drop-shadow-#{$name} { @include mixins.neon-drop-shadow(rgba($value, .2)) }
+}

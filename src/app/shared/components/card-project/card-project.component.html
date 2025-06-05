@@ -1,0 +1,22 @@
+<a
+  class="card p-lg-6 p-5 bg-{{content.color}}-020"
+  target="_blank"
+  [style.backgroundImage]="'url(' + content.thumbnail + ')'"
+  [href]="content.url"
+>
+  <h3 class="tag mb-5">{{ content.name }}</h3>
+
+  <p class="text-body-secondary mb-0"><ng-content></ng-content></p>
+
+  <div class="d-flex mt-auto justify-content-between">
+    <ul class="badge-list align-items-end fs-5">
+      @for (tag of content.tags; track tag) {
+        <li class="badge bg-primary-050">{{ tag }}</li>
+      }
+    </ul>
+
+    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" opacity="0.5">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21.44 13.81c-.15 6.56-1.92 8-8.99 8-7.4 0-9-1.59-9-9 0-7.07 1.45-8.84 8-8.99m9.5.49-7.5 7.5m3-8h4.68c.18 0 .32.15.32.33V8.8"/>
+    </svg>
+  </div>
+</a>

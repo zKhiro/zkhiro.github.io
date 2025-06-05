@@ -1,13 +1,76 @@
+@use "sass:map";
+
 @use "/node_modules/bootstrap/scss/mixins/breakpoints" as bs-breakpoints;
 
 @use "./variables/breakpoints";
 @use "./variables/colors";
+@use "./variables/buttons";
 
 
-@mixin noisy-background($bg-color: colors.$dark-blue) {
-  background-color:   $bg-color;
-  background-image:   url("/assets/images/noisy-texture.png");
-  background-repeat:  repeat;
+html {
+  background: map.get(colors.$theme, "dark");
+}
+
+@mixin before() {
+  &::before { @content }
+}
+
+@mixin after() {
+  &::after { @content }
+}
+
+@mixin highlight($color, $opacity: 1) {
+  background: radial-gradient(circle at 100% 100%, $color, transparent 24%);
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: $opacity;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  @content;
+}
+
+@mixin before-highlight($color, $opacity: 1) {
+  @include before() {
+    @include highlight($color, $opacity) {
+      @content;
+    };
+  }
+}
+
+@mixin before-highlight-on-hover($color, $new-opacity: .14, $old-opacity: 0) {
+  @include before-highlight($color, $old-opacity) {
+    transition: opacity buttons.$link-transition-duration;
+  };
+
+  &:hover {
+    @include before() { opacity: $new-opacity; }
+  }
+}
+
+@mixin after-highlight($color, $opacity: 1) {
+  @include after() {
+    @include highlight($color, $opacity) {
+      @content
+    };
+  }
+}
+
+@mixin after-highlight-on-hover($color, $new-opacity: .14, $old-opacity: 0) {
+  @include after-highlight($color, $old-opacity) {
+    transition: opacity buttons.$link-transition-duration;
+  }
+
+  &:hover {
+    @include after() { opacity: $new-opacity; }
+  }
+}
+
+@mixin neon-drop-shadow($color: rgba(map.get(colors.$theme, "primary"), .2)) {
+  filter: drop-shadow(0 0 1.5rem $color);
 }
 
 @mixin media-breakpoint-up($breakpoint) {

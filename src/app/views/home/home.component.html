@@ -1,80 +1,65 @@
-<header class="home-header d-flex flex-column align-items-center text-center">
-  <h2 class="text-regular tag text-secondary fw-lighter">Oh, hi beautiful person.</h2>
+<header class="home-header mx-auto text-center">
   <h1 class="mb-0">
-    I’m Leandro, breathing web since
+    {{ homeViewLocale.PRESENTATION.HEADER }}
     <span
       animateNumber
-      class="text-primary"
+      class="text-primary neon-drop-shadow-primary"
       [duration]="650"
       [delay]="1250"
       [endValue]="2017"
       [initialValue]="currentYear"
     ></span>
   </h1>
+
+  <button
+    class="btn btn-secondary"
+    type="button"
+    [style.marginTop.rem]="8"
+    (click)="copyEmail()"
+  >
+    {{ homeViewLocale.PRESENTATION.CONTACT_ME_BUTTON }}
+  </button>
 </header>
 
-<section class="content-section d-flex flex-lg-row flex-column-reverse gap-5 pb-md-6 pb-4">
+<section class="content-section d-flex flex-lg-row flex-column-reverse gap-5 pb-5">
   <section class="left-column d-flex flex-column col-lg col-12 gap-5">
     <div class="card p-lg-6 p-5">
-      <h3 class="card-header tag mb-5">About Me</h3>
+      <h3 class="card-header tag mb-5">{{ homeViewLocale.ABOUT_ME.HEADER }}</h3>
 
       <svg class="icon user" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M10 2h4v4h-4V2zM7 7h10v2h-2v13h-2v-6h-2v6H9V9H7V7zM5 5v2h2V5H5zm0 0H3V3h2v2zm14 0v2h-2V5h2zm0 0V3h2v2h-2z" fill="currentColor"/>
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15.15 11.5V9.75c0-.51.26-1 .69-1.28l.05-.04a1.45 1.45 0 0 1 2.26 1.21v3.84a7.96 7.96 0 0 1-4.3 7.1 8 8 0 0 1-11.7-7.1v-.79a2 2 0 1 1 4 0v.8"/>
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M6.15 12.5V6.3a1.5 1.5 0 0 1 3 0v5.2m3 0V6.3a1.5 1.5 0 0 1 3 0v3.2m-6-3V5.3a1.5 1.5 0 0 1 3 0v1.2"/>
+        <path stroke="currentColor" stroke-linecap="round" stroke-width="1" d="M19.04 3.92a3.5 3.5 0 0 1 3.5 3.5m-4.28-1.27a2 2 0 0 1 2 2M4.17 1.05a3.5 3.5 0 0 0-2.8 4.08M5.35 3.1a2 2 0 0 0-1.6 2.33"/>
       </svg>
 
-      <p>I've been fascinated by technologies and arts since childhood.</p>
-      <p>I feel motivated when I'm creative. I love working with CSS, especially creating animations.</p>
-      <p>
-        In everything I'm involved with, I desire to pay extra attention to quality, whether it's in terms of what could
-        be better in usability for the user or in code, making it more scalable and applying concepts like KISS, YAGNI, DRY
-        and when finishing a task always validate through a devbox.
-      </p>
-      <p>
-        Teamwork is a practice I contemplate. I enjoy being able to help and be helped, which leads me to adopt pair
-        programming practices when I'm blocked or to help someone.
-      </p>
+      @for (pContent of homeViewLocale.ABOUT_ME.P; track pContent) {
+        <p>{{ pContent }}</p>
+      }
     </div>
 
     <div class="skill-list card p-lg-6 p-5">
-      <h3 class="tag mb-5">Skills</h3>
-      <svg class="icon skill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-        <path d="M16 3H6v2H2v10h6V5h8v10h6V5h-4V3h-2zm4 4v6h-2V7h2zM6 13H4V7h2v6zm12 2H6v2h12v-2zm-7 2h2v2h3v2H8v-2h3v-2z" fill="currentColor"/>
+      <h3 class="tag mb-5">{{ homeViewLocale.SKILL.HEADER }}</h3>
+      <svg class="icon skill" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m21.41 13.01-4.06 1.48a2 2 0 0 0-1.23 1.29l-1.55 5.05a.16.16 0 0 1-.16.11.16.16 0 0 1-.15-.11l-1.55-5.05a2 2 0 0 0-1.23-1.3L7.4 13.02a.2.2 0 0 1 0-.36l4.07-1.48a2 2 0 0 0 1.23-1.3l1.55-5.04a.16.16 0 0 1 .3 0l1.56 5.05a2 2 0 0 0 1.23 1.29l4.06 1.48a.2.2 0 0 1 0 .36ZM4.16 6.08c.47.16.85.53 1 1 .08.24.42.24.5 0a1.58 1.58 0 0 1 1-1 .26.26 0 0 0 0-.5 1.58 1.58 0 0 1-1-1 .26.26 0 0 0-.5 0 1.58 1.58 0 0 1-1 1 .26.26 0 0 0 0 .5Zm3.5 14a1.58 1.58 0 0 0-1 1 .26.26 0 0 1-.5 0 1.58 1.58 0 0 0-1-1 .26.26 0 0 1 0-.5 1.58 1.58 0 0 0 1-1 .26.26 0 0 1 .5 0c.16.47.53.84 1 1 .24.08.24.42 0 .5Z"/>
       </svg>
 
-      <ul class="d-flex fs-5">
-        <li *ngFor="let skill of Skills" class="badge">{{ skill }}</li>
+      <ul class="badge-list d-flex fs-5 justify-content-between">
+        @for (skill of Skills$ | async; track skill) {
+          <li class="badge">{{ skill }}</li>
+        }
       </ul>
     </div>
   </section>
 
   <section class="right-column d-flex flex-column gap-5 col-lg col-12">
     <!-- If add or remove a card remember to increase or decrease the card quantity in home.component.scss -->
-    <a
-      class="card px-5 py-3"
-      href="https://www.linkedin.com/in/leandro-matias/"
-      target="_blank"
-    >
-      <h3 class="tag">Experience</h3>
-      <p class="text-secondary">See my Linkedin profile.</p>
-    </a>
-
-    <a
-      class="card px-5 py-3"
-      href="https://github.com/zKhiro"
-      target="_blank"
-    >
-      <h3 class="tag">Github</h3>
-      <p class="text-secondary">See my repositories and contributions.</p>
-    </a>
-
-    <a
-      class="card px-5 py-3"
-      href="https://codepen.io/zkhiro"
-      target="_blank"
-    >
-      <h3 class="tag">CodePen</h3>
-      <p class="text-secondary">See my pens.</p>
-    </a>
+    @for (link of Links$ | async; track link) {
+      <app-card-link
+        [description]="homeViewLocale[link.localeKey]"
+        [header]="link.header"
+        [link]="link.url"
+      ></app-card-link>
+    }
 
     <!-- <div class="card download px-5 py-3">
       <h3 class="tag">Resume</h3>
@@ -85,7 +70,7 @@
           class="link flag"
           href="assets/resume/Leandro Matias Baldo PT-BR.pdf"
           target="_blank"
-        >
+          >
           <img src="assets/images/flags/br.svg" alt="brazilian flag">
         </a>
 
@@ -93,27 +78,38 @@
           class="link flag"
           href="assets/resume/Leandro Matias Baldo EN.pdf"
           target="_blank"
-        >
+          >
           <img src="assets/images/flags/us.svg" alt="United State of America flag">
         </a>
       </div>
     </div> -->
-
-    <div class="card p-5 flex-fill">
-      <h3 class="tag mb-5">Hosted Projects</h3>
-
-      <a
-        *ngFor="let project of Projects"
-        class="card link text-center p-3 col-lg-6"
-        target="_blank"
-        [href]="project.link"
-      >
-        <span class="position-relative">
-          {{ project.name }}
-
-          <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <path d="M9 2H5v2H3v2H1v6h2v2h2v2h2v2h2v2h2v2h2v-2h2v-2h2v-2h2v-2h2v-2h2V6h-2V4h-2V2h-4v2h-2v2h-2V4H9V2zm0 2v2h2v2h2V6h2V4h4v2h2v6h-2v2h-2v2h-2v2h-2v2h-2v-2H9v-2H7v-2H5v-2H3V6h2V4h4z" fill="currentColor"/> </svg>
-        </span>
-      </a>
-    </div>
   </section>
 </section>
+
+<section class="section-projects gap-5">
+  @for (project of Projects$ | async; track project) {
+    <app-card-project class="col-12 col-lg" [content]="project">
+      {{ homeViewLocale.PROJECTS[project.descriptionKey] }}
+    </app-card-project>
+  }
+</section>
+
+<app-toast [(show)]="showToast">
+  <svg
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    color="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    [style.width.rem]="2"
+  >
+    <path d="M15 3C16.8856 3 17.8284 3 18.4142 3.58579C19 4.17157 19 5.11438 19 7L19 17C19 18.8856 19 19.8284 18.4142 20.4142C18.4142 20.4142 18.4142 20.4142 18.4142 20.4142C17.8284 21 16.8856 21 15 21V21L9 21V21C7.11438 21 6.17157 21 5.58579 20.4142C5 19.8284 5 18.8856 5 17L5 7C5 5.11438 5 4.17157 5.58579 3.58579C5.58579 3.58579 5.58579 3.58579 5.58579 3.58579C6.17157 3 7.11438 3 9 3V3L15 3V3Z"></path>
+    <path d="M9 3V6C9 7.10457 9.89543 8 11 8H13C14.1046 8 15 7.10457 15 6V3"></path>
+    <path d="M9 15L10.5 16.5V16.5C10.7761 16.7761 11.2239 16.7761 11.5 16.5V16.5L15 13"></path>
+  </svg>
+
+  <p class="mt-3 mb-0">{{ toastText }}</p>
+</app-toast>

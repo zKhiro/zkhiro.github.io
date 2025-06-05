@@ -2,7 +2,8 @@ import { AfterViewInit, Directive, ElementRef, HostListener } from '@angular/cor
 
 
 @Directive({
-  selector: '[appViewHeight]'
+    selector: '[appViewHeight]',
+    standalone: false
 })
 export class ViewHeightDirective implements AfterViewInit {
 

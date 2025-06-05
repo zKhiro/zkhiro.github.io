@@ -19,6 +19,9 @@
     },
     "LINKEDIN": "Veja meu perfil no LinkedIn.",
     "GITHUB": "Veja minhas contribuições e repositórios.",
-    "CODEPEN": "Veja meus experimentos no CodePen."
+    "CODEPEN": "Veja meus experimentos no CodePen.",
+    "PROJECTS": {
+      "GITHUB_SEARCH_DESCRIPTION": "Procure por usuários ou repositórios no Github."
+    }
   }
 }

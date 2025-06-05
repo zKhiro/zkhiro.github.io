@@ -2,7 +2,7 @@ import { Observable } from 'rxjs';
 
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { LinksModel } from '@models/content.model';
+import { LinksModel, ProjectsModel } from '@models/content.model';
 
 
 @Injectable({
@@ -21,5 +21,9 @@ export class ContentService {
 
   getLinks(): Observable<Array<LinksModel>> {
     return this.httpClient.get<Array<LinksModel>>(`${this.DATA_ENDPOINT}/links.json`);
+  }
+
+  getProjects(): Observable<Array<ProjectsModel>> {
+    return this.httpClient.get<Array<ProjectsModel>>(`${this.DATA_ENDPOINT}/projects.json`)
   }
 }

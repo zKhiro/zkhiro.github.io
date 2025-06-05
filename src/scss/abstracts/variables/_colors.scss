@@ -30,7 +30,12 @@ $theme: (
   "secondary":    $palatinate-blue,
   "tertiary":     $cool-gray,
   "dark":         $raisin-black,
-  "bg-light":     hsla(223, 70%, 62%, 0.06)
+  "bg-light":     rgba(90, 129, 226, 0.06),
 );
 
-$theme: map.merge($theme, $skill-theme);
+$theme-opacity: (
+  "primary-020": rgba(map.get($theme, "primary"), .2),
+  "primary-050": rgba(map.get($theme, "primary"), .5),
+  "secondary-020": rgba(map.get($theme, "secondary"), .2),
+  "secondary-050": rgba(map.get($theme, "secondary"), .5),
+);

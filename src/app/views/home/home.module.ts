@@ -1,3 +1,7 @@
+import {
+  CardProjectComponent,
+} from 'src/app/shared/components/card-project/card-project.component';
+
 import { CommonModule } from '@angular/common';
 import { provideHttpClient } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -22,6 +26,7 @@ import { HomeComponent } from './home.component';
     AnimateNumberModule,
 
     CardLinkComponent,
+    CardProjectComponent
   ],
   providers: [
     provideHttpClient(),

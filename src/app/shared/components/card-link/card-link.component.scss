@@ -1,37 +1,22 @@
 @use "sass:map";
 
 @use "functions" as fun;
+@use "mixins";
 @use "variables/colors";
 @use "variables/buttons";
 
 
 a {
-  transition: buttons.$link-transition, box-shadow buttons.$link-transition-duration;
+  border-radius: fun.convert-px-to-rem(24);
   overflow: hidden;
 
   .icon { transition: opacity .2s; }
 
-  &::before {
-    background: radial-gradient(circle at 100% 100%, map.get(colors.$theme, "primary"), transparent 24%);
-    content: "";
-    height: 100%;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    transition: opacity .2s;
-    width: 100%;
-  }
+  @include mixins.before-highlight-on-hover(map.get(colors.$theme, "primary"));
 
   &:hover {
-    box-shadow: 0 0 0 fun.convert-px-to-rem(2) map.get(colors.$theme, "primary");
-
     .icon {
       opacity: 1;
-    }
-
-    &::before {
-      opacity: .14;
     }
   }
 }

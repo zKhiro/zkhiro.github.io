@@ -21,4 +21,9 @@ export interface HomeViewLocale {
   LINKEDIN: string;
   GITHUB: string;
   CODEPEN: string;
+  PROJECTS: ProjectsLocale;
+}
+
+export interface ProjectsLocale {
+  GITHUB_SEARCH_DESCRIPTION: string;
 }

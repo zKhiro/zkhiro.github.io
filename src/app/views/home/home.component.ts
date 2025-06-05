@@ -2,7 +2,7 @@ import { Observable, Subscription } from 'rxjs';
 
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { LinksModel } from '@models/content.model';
+import { LinksModel, ProjectsModel } from '@models/content.model';
 import { HomeViewLocale } from '@models/locale.model';
 import { ContentService, LocaleService } from '@services';
 
@@ -11,18 +11,13 @@ import { ContentService, LocaleService } from '@services';
     selector: 'app-home',
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss'],
-    host: { 'class': 'home-container container flex-column' },
+    host: { 'class': 'container container flex-column' },
     standalone: false
 })
 export class HomeComponent implements OnInit, OnDestroy {
   readonly Skills$: Observable<Array<String>> = this.contentService.getSkill();
   readonly Links$: Observable<Array<LinksModel>> = this.contentService.getLinks();
-  readonly Projects = [
-    {
-      name: "Github Search",
-      link: "https://leandro-github-search.vercel.app"
-    }
-  ]
+  readonly Projects$: Observable<Array<ProjectsModel>> = this.contentService.getProjects();
 
   currentYear = new Date().getFullYear();
 

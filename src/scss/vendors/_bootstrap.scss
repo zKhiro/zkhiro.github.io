@@ -55,6 +55,7 @@
   $btn-border-radius: buttons.$border-radius,
 
   $enable-rfs: false,
+  $enable-dark-mode: false,
 
   /** Links **/
 
@@ -64,7 +65,7 @@
   /** Cards **/
 
   $card-border-width:                 0,
-  $card-border-radius:                fun.convert-px-to-rem(24),
+  $card-border-radius:                fun.convert-px-to-rem(64),
   $card-cap-padding-y:                0,
   $card-cap-padding-x:                0,
   $card-cap-bg:                       transparent,
@@ -77,4 +78,5 @@
   $badge-color:                       inherit,
   $badge-padding-y:                   .35em,
   $badge-padding-x:                   .65em,
+  $badge-border-radius:               buttons.$border-radius,
 );

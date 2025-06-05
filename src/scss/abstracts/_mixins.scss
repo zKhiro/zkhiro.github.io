@@ -4,6 +4,7 @@
 
 @use "./variables/breakpoints";
 @use "./variables/colors";
+@use "./variables/buttons";
 
 
 html {
@@ -42,7 +43,7 @@ html {
 
 @mixin before-highlight-on-hover($color, $new-opacity: .14, $old-opacity: 0) {
   @include before-highlight($color, $old-opacity) {
-    transition: opacity .2s;
+    transition: opacity buttons.$link-transition-duration;
   };
 
   &:hover {
@@ -60,7 +61,7 @@ html {
 
 @mixin after-highlight-on-hover($color, $new-opacity: .14, $old-opacity: 0) {
   @include after-highlight($color, $old-opacity) {
-    transition: opacity .2s;
+    transition: opacity buttons.$link-transition-duration;
   }
 
   &:hover {
@@ -69,7 +70,7 @@ html {
 }
 
 @mixin neon-drop-shadow($color: rgba(map.get(colors.$theme, "primary"), .2)) {
-  filter: drop-shadow(0 0 1.5rem $color)
+  filter: drop-shadow(0 0 1.5rem $color);
 }
 
 @mixin media-breakpoint-up($breakpoint) {

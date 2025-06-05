@@ -4,7 +4,8 @@
 @use "variables/colors";
 @use "variables/buttons";
 
-$card-quatity: 4;
+$links-quantity: 3;
+$projects-quantity: 1;
 
 $icon-size: fun.convert-px-to-rem(150);
 $icon-position: fun.convert-px-to-rem(32);
@@ -19,6 +20,14 @@ $animation-duration: .8s;
   animation-fill-mode: forwards;
 
   opacity: 0;
+}
+
+@mixin loop-animation($quantity, $multi: .25) {
+  @for $i from 1 through $quantity {
+    &>*:nth-child(#{$i}n) {
+      @include animation-fade-in($animation-duration + $multi * ($i * .45));
+    }
+  }
 }
 
 .home-header {
@@ -40,6 +49,8 @@ $animation-duration: .8s;
 
     @include animation-fade-in(.2s);
   }
+
+  button { @include animation-fade-in($animation-duration * .75); }
 }
 
 .card {
@@ -122,16 +133,14 @@ a {
 }
 
 .right-column {
-  @for $i from 1 through $card-quatity {
-    &>*:nth-child(#{$i}n) {
-      @include animation-fade-in($animation-duration + .5 * ($i * .45));
-    }
-  }
+  @include loop-animation($links-quantity);
 }
 
 .section-projects {
   display: flex;
   flex-wrap: wrap;
+
+  @include loop-animation($projects-quantity, .5);
 }
 
 @keyframes fade-in {

@@ -1,12 +1,24 @@
 @use "typography";
+@use "../functions" as fun;
 
 
-$padding-y: .5rem;
-$padding-x: 2rem;
+$padding-y: fun.convert-px-to-rem(6);
+$padding-x: 1rem;
 
-$font-size: typography.$h3-font-size;
+$font-size: typography.$font-size-base;
+$font-weight: 700;
 
-$border-radius: .5rem;
+$letter-spacing: fun.convert-px-to-rem(2.5);
+
+$border-radius: fun.convert-px-to-rem(12);
 
 $link-transition-duration: .15s;
-$link-transition: color $link-transition-duration, background-image $link-transition-duration;
+$link-transition: color ease-in-out $link-transition-duration,
+                  background-image ease-in-out $link-transition-duration,
+                  box-shadow ease-in-out $link-transition-duration;
+
+$btn-transition: color $link-transition-duration ease-in-out,
+                 background-color $link-transition-duration ease-in-out,
+                 border-color $link-transition-duration ease-in-out,
+                 box-shadow $link-transition-duration ease-in-out,
+                 filter .2s;

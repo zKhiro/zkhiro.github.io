@@ -1,7 +1,9 @@
 {
   "HOME": {
     "PRESENTATION": {
-      "HEADER": "I’m Leandro, breathing web since"
+      "HEADER": "I’m Leandro, breathing web since",
+      "CONTACT_ME_BUTTON": "Contact Me",
+      "CONTACT_ME_TOAST": "My e-mail was successfully copied!"
     },
     "ABOUT_ME": {
       "HEADER": "About Me",

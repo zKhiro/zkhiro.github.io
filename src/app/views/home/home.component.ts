@@ -19,6 +19,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   readonly Links$: Observable<Array<LinksModel>> = this.contentService.getLinks();
   readonly Projects$: Observable<Array<ProjectsModel>> = this.contentService.getProjects();
 
+  showToast = false;
+  toastText: string;
+
   currentYear = new Date().getFullYear();
 
   homeViewLocale: HomeViewLocale
@@ -46,5 +49,12 @@ export class HomeComponent implements OnInit, OnDestroy {
     if (this.localeChangedSubs) {
       this.localeChangedSubs.unsubscribe()
     }
+  }
+
+  copyEmail(): void {
+    navigator.clipboard.writeText("leandro.nupsi@gmail.com");
+
+    this.toastText = this.homeViewLocale.PRESENTATION.CONTACT_ME_TOAST;
+    this.showToast = true;
   }
 }

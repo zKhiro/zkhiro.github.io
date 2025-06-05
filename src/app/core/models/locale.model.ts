@@ -15,13 +15,18 @@ export interface LocaleContentModel {
 }
 
 export interface HomeViewLocale {
-  PRESENTATION: LocaleContentHeaderModel;
+  PRESENTATION: PresentationLocale;
   ABOUT_ME: LocaleContentType
   SKILL: LocaleContentHeaderModel;
   LINKEDIN: string;
   GITHUB: string;
   CODEPEN: string;
   PROJECTS: ProjectsLocale;
+}
+
+export interface PresentationLocale extends LocaleContentHeaderModel {
+  CONTACT_ME_BUTTON: string;
+  CONTACT_ME_TOAST: string;
 }
 
 export interface ProjectsLocale {

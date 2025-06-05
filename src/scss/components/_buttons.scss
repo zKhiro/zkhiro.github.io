@@ -1,14 +1,23 @@
 @use "sass:map";
 
 @use "../abstracts/functions" as fun;
+@use "../abstracts/mixins";
 @use "../abstracts/variables/colors";
 @use "../abstracts/variables/buttons";
 
 
 .link {
-  transition: color buttons.$link-transition-duration;
+  transition: buttons.$link-transition;
 
   &:hover {
     color: map.get(colors.$theme, "primary") !important;
+  }
+}
+
+.btn {
+  letter-spacing: buttons.$letter-spacing;
+
+  &:hover {
+    @include mixins.neon-drop-shadow(rgba(map.get(colors.$theme, "secondary"), .12))
   }
 }

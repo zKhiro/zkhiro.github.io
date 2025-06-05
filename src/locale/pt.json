@@ -1,7 +1,9 @@
 {
   "HOME": {
     "PRESENTATION": {
-      "HEADER": "Eu sou Leandro, respirando web desde"
+      "HEADER": "Eu sou Leandro, respirando web desde",
+      "CONTACT_ME_BUTTON": "Fale Comigo",
+      "CONTACT_ME_TOAST": "Meu e-mail foi copiado com sucesso!"
     },
     "ABOUT_ME": {
       "HEADER": "Sobre Mim",

@@ -49,10 +49,14 @@
   $hr-color:    map.get(colors.$theme, "primary"),
   $hr-opacity:  .5,
 
+  /** Buttons **/
+
   $btn-padding-y:     buttons.$padding-y,
   $btn-padding-x:     buttons.$padding-x,
   $btn-font-size:     buttons.$font-size,
+  $btn-font-weight:   buttons.$font-weight,
   $btn-border-radius: buttons.$border-radius,
+  $btn-transition:    buttons.$btn-transition,
 
   $enable-rfs: false,
   $enable-dark-mode: false,
@@ -71,6 +75,13 @@
   $card-cap-bg:                       transparent,
   $card-bg:                           map.get(colors.$theme, "bg-light"),
 
+  /** Toasts **/
+
+  $toast-font-size:     1rem,
+  $toast-box-shadow:    none,
+  $toast-border-radius: 1rem,
+
+
   /** Badges **/
 
   $badge-font-size:                   .8em,
@@ -78,5 +89,5 @@
   $badge-color:                       inherit,
   $badge-padding-y:                   .35em,
   $badge-padding-x:                   .65em,
-  $badge-border-radius:               buttons.$border-radius,
+  $badge-border-radius:               .5rem,
 );

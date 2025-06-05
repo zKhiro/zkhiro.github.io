@@ -1,0 +1,8 @@
+@use "sass:map";
+
+@use "variables/colors";
+
+
+.lang-section {
+  background: radial-gradient(18rem 4.75rem at 100% 1%, rgba(map.get(colors.$theme, "primary"), .12), transparent 56%);
+}

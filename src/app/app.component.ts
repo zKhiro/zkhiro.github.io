@@ -7,9 +7,10 @@ import { LocaleService } from '@services';
 
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    standalone: false
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  standalone: false,
+  styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit, OnDestroy {
 

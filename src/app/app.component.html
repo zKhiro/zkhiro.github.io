@@ -1,19 +1,43 @@
 <main class="overflow-auto d-flex flex-column flex-fill pb-5" appViewHeight>
-  <section class="d-flex gap-3 ms-auto pt-2 pe-2 fixed-top justify-content-end">
-    <span>Lang </span>
-    <form>
+  <section class="lang-section d-flex gap-3 ms-auto py-2 pe-2 fixed-top justify-content-end">
+    <svg
+      class="text-secondary-008"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      opacity=".5"
+      [style.width.rem]="1.5"
+    >
+      <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"></path>
+      <path d="M12 3.05554C14.455 5.25282 16 8.44597 16 12C16 15.554 14.455 18.7471 12 20.9444"></path>
+      <path d="M12.0625 21C9.57126 18.8012 8 15.5841 8 12C8 8.41592 9.57126 5.19883 12.0625 3"></path>
+      <path d="M3 12H21"></path>
+    </svg>
+
+    <form class="d-flex align-items-center gap-1">
       <input
         class="lang-radio"
+        id="lang-pt"
         type="radio"
         value="pt"
         [formControl]="langControl"
       />
+
+      <label for="lang-pt">BR</label>
+
       <input
-        class="lang-radio ms-1"
+        class="lang-radio"
+        id="lang-en"
         type="radio"
         value="en"
         [formControl]="langControl"
       />
+
+      <label for="lang-en">EN</label>
     </form>
   </section>
 

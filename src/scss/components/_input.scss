@@ -4,32 +4,34 @@
 @use "../abstracts/variables/colors";
 @use "../abstracts/functions" as fun;
 
+
 .lang-radio {
   appearance: none;
   background-repeat: no-repeat;
   background-size: contain;
   border-radius: fun.convert-px-to-rem(4);
   cursor: pointer;
-  filter: grayscale(1);
   height: 1.5rem;
-  opacity: .65;
-  transition: filter .2s;
-  width: 2rem;
 
-  &[value=pt] {
-    background-image: url("/assets/images/flags/br.svg");
-  }
-
-  &[value=en] {
-    background-image: url("/assets/images/flags/us.svg");
+  &+label {
+    color: map.get(colors.$theme, "tertiary");
+    cursor: pointer;
+    padding-top: fun.convert-px-to-rem(3);
+    transition: color .2s;
   }
 
   &:hover {
-    filter: grayscale(.5);
+    &+label {
+      color: colors.$white;
+    }
   }
 
   &:checked {
-    cursor: default;
-    filter: grayscale(0) drop-shadow(0 fun.convert-px-to-rem(4) fun.convert-px-to-rem(8) color.change(map.get(colors.$theme, "primary"), $alpha: .35));
+    &+label {
+      color: map.get(colors.$theme, "primary");
+      cursor: default;
+
+      font-weight: 700;
+    }
   }
 }

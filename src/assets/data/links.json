@@ -1,16 +1,16 @@
 [
   {
-    "link": "https://www.linkedin.com/in/leandro-matias/",
+    "url": "https://www.linkedin.com/in/leandro-matias/",
     "header": "LinkedIn",
     "localeKey": "LINKEDIN"
   },
   {
-    "link": "https://github.com/zKhiro",
+    "url": "https://github.com/zKhiro",
     "header": "Github",
     "localeKey": "GITHUB"
   },
   {
-    "link": "https://codepen.io/zkhiro",
+    "url": "https://codepen.io/zkhiro",
     "header": "CodePen",
     "localeKey": "CODEPEN"
   }

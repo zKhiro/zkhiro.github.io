@@ -12,7 +12,7 @@
   </h1>
 </header>
 
-<section class="content-section d-flex flex-lg-row flex-column-reverse gap-5 pb-md-6 pb-4">
+<section class="content-section d-flex flex-lg-row flex-column-reverse gap-5 pb-5">
   <section class="left-column d-flex flex-column col-lg col-12 gap-5">
     <div class="card p-lg-6 p-5">
       <h3 class="card-header tag mb-5">{{ homeViewLocale.ABOUT_ME.HEADER }}</h3>
@@ -79,7 +79,7 @@
 
 <section class="section-projects gap-5">
   @for (project of Projects$ | async; track project) {
-    <app-card-project class="col" [content]="project">
+    <app-card-project class="col-12 col-lg" [content]="project">
       {{ homeViewLocale.PROJECTS[project.descriptionKey] }}
     </app-card-project>
   }

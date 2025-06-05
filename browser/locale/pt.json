@@ -1,0 +1,29 @@
+{
+  "HOME": {
+    "PRESENTATION": {
+      "HEADER": "Eu sou Leandro, respirando web desde",
+      "CONTACT_ME_BUTTON": "Fale Comigo",
+      "CONTACT_ME_TOAST": "Meu e-mail foi copiado com sucesso!"
+    },
+    "ABOUT_ME": {
+      "HEADER": "Sobre Mim",
+      "P": [
+        "Oooi, me chamo Leandro e tenho paixão por vídeo games, arte e meteorologia desde minha infância.",
+        "Me sinto motivado quando sou criativo. Eu amo trabalhar com CSS, especialmente animações.",
+        "Tenho habilidade em trabalhar com projetos sofisticados. Possuo um pensamento preciso para organizar e detalhar os fatos, assim alcançar uma melhor resolução.",
+        "Valorizo qualidade do produto, seja em questão de usabilidade para o usuário ou em código, deixando-o mais escalável e aplicando conceitos como KISS, YAGNI, DRY e ao terminar uma tarefa sempre validar através de um devbox.",
+        "Trabalho em equipe é uma prática que contemplo. Gosto de poder ajudar e de ser ajudado, isso me levar a adotar práticas de pair programming quando estou com impedimentos ou para ajudar alguém.",
+        "Em Dezembro de 2024, descobri que sou Autista e desde então venho tentando me entender melhor e me aceitar como sou."
+      ]
+    },
+    "SKILL": {
+      "HEADER": "Proeficiências"
+    },
+    "LINKEDIN": "Veja meu perfil no LinkedIn.",
+    "GITHUB": "Veja minhas contribuições e repositórios.",
+    "CODEPEN": "Veja meus experimentos no CodePen.",
+    "PROJECTS": {
+      "GITHUB_SEARCH_DESCRIPTION": "Procure por usuários ou repositórios no Github."
+    }
+  }
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Github Search",
+    "descriptionKey": "GITHUB_SEARCH_DESCRIPTION",
+    "url": "https://leandro-github-search.vercel.app",
+    "tags": [ "Angular" ],
+    "thumbnail": "/assets/images/projects/github-search-thumbnail.png",
+    "color": "primary"
+  }
+]

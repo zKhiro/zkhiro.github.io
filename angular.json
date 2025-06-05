@@ -18,7 +18,8 @@
           "builder": "@angular/build:application",
           "options": {
             "outputPath": {
-              "base": "dist/zkhiro-github"
+              "base": "dist/zkhiro-github",
+              "browser": ""
             },
             "index": "src/index.html",
             "polyfills": [
@@ -45,6 +46,7 @@
           },
           "configurations": {
             "production": {
+              "optimization": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -102,14 +104,16 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/locale"
             ],
             "styles": [
               "src/scss/styles.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "src/scss/abstracts/"
+                "src/scss/abstracts/",
+                "."
               ]
             },
             "scripts": []

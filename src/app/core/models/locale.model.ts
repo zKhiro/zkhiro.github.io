@@ -16,12 +16,16 @@ export interface LocaleContentModel {
 
 export interface HomeViewLocale {
   PRESENTATION: PresentationLocale;
-  ABOUT_ME: LocaleContentType
+  ABOUT_ME: AboutMeLocale;
   SKILL: LocaleContentHeaderModel;
   LINKEDIN: string;
   GITHUB: string;
   CODEPEN: string;
   PROJECTS: ProjectsLocale;
+}
+
+export interface AboutMeLocale extends LocaleContentType {
+  PRONOUN: string,
 }
 
 export interface PresentationLocale extends LocaleContentHeaderModel {

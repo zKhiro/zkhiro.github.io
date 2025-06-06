@@ -10,3 +10,7 @@
 @each $name, $value in colors.$theme {
   .neon-drop-shadow-#{$name} { @include mixins.neon-drop-shadow(rgba($value, .2)) }
 }
+
+@each $name, $value in colors.$projects-theme {
+  .bg-#{$name} { background-color: rgba($value, colors.$project-bg-opacity); }
+}

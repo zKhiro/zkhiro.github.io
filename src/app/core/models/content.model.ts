@@ -13,5 +13,5 @@ export interface ProjectsModel {
   url: string;
   tags: Array<string>;
   thumbnail: string;
-  color: string;
+  cssTheme?: string;
 }

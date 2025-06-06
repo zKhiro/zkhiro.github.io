@@ -1,8 +1,9 @@
 <a
-  class="card p-lg-6 p-5 bg-{{content.color}}-020"
+  class="card p-lg-6 p-5"
   target="_blank"
-  [style.backgroundImage]="'url(' + content.thumbnail + ')'"
+  [class]="content.cssTheme ? 'bg-' + content.cssTheme : ''"
   [href]="content.url"
+  [style.backgroundImage]="'url(/assets/images/projects/' + content.thumbnail + ')'"
 >
   <h3 class="tag mb-5">{{ content.name }}</h3>
 
@@ -11,7 +12,7 @@
   <div class="d-flex mt-auto justify-content-between">
     <ul class="badge-list align-items-end fs-5">
       @for (tag of content.tags; track tag) {
-        <li class="badge bg-primary-050">{{ tag }}</li>
+        <li class="badge" [title]="tag">{{ tag }}</li>
       }
     </ul>
 

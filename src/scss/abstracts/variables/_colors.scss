@@ -9,20 +9,24 @@ $palatinate-blue: #4535CC;
 $cool-gray:       #9498A8;
 $raisin-black:    #181C25;
 
-// Skill colors
-$dark-magenta:    #AF2858;
-$blue:            #334A99;
-$orange:          #C6670F;
-$cyan:            #29B59B;
-$green:           #62B422;
-$skill-lightness:   90;
+// Project Colors
+$github-search: #2544AB;
+$jsdoc:         #F1EB57;
+
+$project-bg-opacity: .2;
+
+$projects-theme: (
+  "github-search":  $github-search,
+  "jsdoc":          $jsdoc,
+);
+
+// Skills
+$angular: #e90364;
+$figma:   #ff3737;
 
 $skill-theme: (
-  "active":     $dark-magenta,
-  "passive":    $blue,
-  "tools":      $orange,
-  "management": $cyan,
-  "data":       $green,
+  "Angular":  $angular,
+  "Figma":    $figma,
 );
 
 $theme: (

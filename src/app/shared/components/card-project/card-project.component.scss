@@ -10,6 +10,10 @@
   height: fun.convert-px-to-rem(420);
   overflow: hidden;
 
+  .project-description {
+    opacity: .85;
+  }
+
   &::before {
     background-image: inherit;
     background-position: center;
@@ -33,7 +37,7 @@
   &:hover {
     &::before {
       opacity: .3;
-      transform: scale(1.01);
+      transform: scale(1.02);
     }
 
     .icon {

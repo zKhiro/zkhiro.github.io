@@ -17,7 +17,7 @@
   background-color: map.get(colors.$theme, "bg-light");
   cursor: default;
   display: inline-flex;
-  letter-spacing: .025em;
+  letter-spacing: .035em;
 
   &.badge-pronoun {
     font-size: fun.convert-px-to-rem(14);

@@ -5,9 +5,9 @@
   [href]="content.url"
   [style.backgroundImage]="'url(/assets/images/projects/' + content.thumbnail + ')'"
 >
-  <h3 class="tag mb-5">{{ content.name }}</h3>
+  <h2 class="tag mb-5">{{ content.name }}</h2>
 
-  <p class="text-body-secondary mb-0"><ng-content></ng-content></p>
+  <p class="project-description mb-0"><ng-content></ng-content></p>
 
   <div class="d-flex mt-auto justify-content-between">
     <ul class="badge-list align-items-end fs-5">

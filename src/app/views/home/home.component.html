@@ -55,14 +55,16 @@
   </section>
 
   <section class="right-column d-flex flex-column gap-5 col-lg col-12">
-    <!-- If add or remove a card remember to increase or decrease the card quantity in home.component.scss -->
-    @for (link of Links$ | async; track link) {
-      <app-card-link
-        [description]="homeViewLocale[link.localeKey]"
-        [header]="link.header"
-        [link]="link.url"
-      ></app-card-link>
-    }
+    <div appPositionSticky class="d-flex flex-column gap-5">
+      <!-- If add or remove a card remember to increase or decrease the card quantity in home.component.scss -->
+      @for (link of Links$ | async; track link) {
+        <app-card-link
+          [description]="homeViewLocale[link.localeKey]"
+          [header]="link.header"
+          [link]="link.url"
+        ></app-card-link>
+      }
+    </div>
 
     <!-- <div class="card download px-5 py-3">
       <h3 class="tag">Resume</h3>

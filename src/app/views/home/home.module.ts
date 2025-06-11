@@ -3,7 +3,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CardLinkComponent, CardProjectComponent, ToastComponent } from '@components';
-import { AnimateNumberModule } from '@directives';
+import { AnimateNumberModule, PositionStickyDirective } from '@directives';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
@@ -24,6 +24,8 @@ import { HomeComponent } from './home.component';
     CardLinkComponent,
     CardProjectComponent,
     ToastComponent,
+
+    PositionStickyDirective,
   ],
   providers: [
     provideHttpClient(),

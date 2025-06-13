@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.homeViewLocale = data.locale;
 
       this.localeChangedSubs = this.localeService.LocaleChanged.subscribe(() => {
-        this.localeService.getViewTranslation().subscribe(locale => this.homeViewLocale = locale);
+        this.localeService.getViewTranslation<HomeViewLocale>(data.locale_key).subscribe(locale => this.homeViewLocale = locale);
       });
     });
   }

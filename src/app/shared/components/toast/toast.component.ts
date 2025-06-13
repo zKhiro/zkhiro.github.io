@@ -16,9 +16,6 @@ export class ToastComponent {
     if (new_value) {
       setTimeout(() => {
         this._show = false;
-
-        console.log('ciao', this._show);
-
         this.showChange.emit(this._show);
       }, 4000);
     }

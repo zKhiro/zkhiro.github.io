@@ -8,7 +8,15 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./views/home/home.module').then(m => m.HomeModule),
     data: {
-      locale_key: "HOME",
+      locale_key: "home",
+    },
+    resolve: { locale: viewLocaleResolver }
+  },
+  {
+    path: 'resume',
+    loadChildren: () => import('./views/resume/resume.module').then(m => m.ResumeModule),
+    data: {
+      locale_key: "resume",
     },
     resolve: { locale: viewLocaleResolver }
   },

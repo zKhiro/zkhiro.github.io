@@ -1,10 +1,8 @@
-import { map, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
-import {
-  HomeViewLocale, LocaleContentModel, LocaleLangType, ViewLocaleKey,
-} from '@models/locale.model';
+import { LocaleLangType, ViewLocaleKey } from '@models/locale.model';
 import { DEFAULT_LANG, LOCAL_STORAGE_KEYS } from '@utils';
 
 
@@ -16,7 +14,7 @@ export class LocaleService {
   private locale_key: ViewLocaleKey;
 
   private readonly _LOCALE_ENDPOINT: string = '/locale';
-  get LOCALE_ENDPOINT(): string { return `${this._LOCALE_ENDPOINT}/${this.current_lang}.json` }
+  get LOCALE_ENDPOINT(): string { return `${this._LOCALE_ENDPOINT}/$/${this.current_lang}.json` }
 
   private _current_lang: LocaleLangType;
   get current_lang(): LocaleLangType {
@@ -42,11 +40,9 @@ export class LocaleService {
     this.LocaleChanged.emit(new_lang);
   }
 
-  getViewTranslation(view?: ViewLocaleKey): Observable<HomeViewLocale> {
-    this.locale_key = view ?? this.locale_key
+  getViewTranslation<R>(view: ViewLocaleKey): Observable<R> {
+    this.locale_key = view;
 
-    return this.httpClient.get<LocaleContentModel>(this.LOCALE_ENDPOINT).pipe(
-      map<LocaleContentModel, HomeViewLocale>(locale => locale[this.locale_key])
-    );
+    return this.httpClient.get<R>(this.LOCALE_ENDPOINT.replace("$", this.locale_key));
   }
 }

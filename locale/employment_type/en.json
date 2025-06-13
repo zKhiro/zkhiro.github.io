@@ -1,0 +1,5 @@
+[
+  { "ID": 0, "NAME": "Full-time" },
+  { "ID": 1, "NAME": "Part-time" },
+  { "ID": 2, "NAME": "Intership" }
+]

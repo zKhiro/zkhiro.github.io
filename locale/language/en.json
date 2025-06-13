@@ -1,0 +1,10 @@
+{
+  "LANGUAGE": [
+    { "ID": 0, "NAME": "Portuguese" },
+    { "ID": 1, "NAME": "English" }
+  ],
+  "PROFICIENCY": [
+    { "id": 0, "NAME": "Native" },
+    { "id": 1, "NAME": "I read, listen and write." }
+  ]
+}

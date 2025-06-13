@@ -1,0 +1,78 @@
+{
+  "PORTFOLIO": "Portfólio",
+  "CONTACT": "Contato",
+  "EXPERIENCIES": {
+    "HEADER": "Experiências",
+    "CONTENT": [
+      {
+        "TITLE": "Desenvolvedor Front-End",
+        "COMPANY": "Compass UOL",
+        "EMPLOYMENT_TYPE": 2,
+        "POSITION": 2,
+        "DATE": {
+          "START": "03/2024",
+          "END": "05/2024"
+        },
+        "LOCATION_TYPE": "Remote",
+        "DESCRIPTION": "Desenvolvimento de software para web com Angular, Typescript e SASS. Trata-se de uma demanda para modernização de um produto da Caixa Econômica Federal.",
+        "SKILLS": [1, 2]
+      },
+      {
+        "TITLE": "Desenvolvedor Web",
+        "COMPANY": "Tokenlab Tecnologia da Informação Ltda.",
+        "EMPLOYMENT_TYPE": 2,
+        "POSITION": 2,
+        "DATE": {
+          "START": "01/2019",
+          "END": "06/2023"
+        },
+        "LOCATION_TYPE": "Remote",
+        "DESCRIPTION": "A stack constituía em: Angular com HTML, SCSS, Typescript e RxJs para tratar dados de maneira reativa e responsividade era fundamental.\nO projeto mais desafiador possuía 5 aplicações web com a mesma identidade visual. Para alcançar isso, exploramos a estratégia submodules do Git. Dessa forma, um repositório de componentes era compartilhado para todos esses projetos.",
+        "SKILLS": [1, 2]
+      },
+      {
+        "TITLE": "Desenvolvedor Full-Stack",
+        "COMPANY": "Universidade do Estado de Minas Gerais, UEMG - NUPSI",
+        "EMPLOYMENT_TYPE": 0,
+        "POSITION": 0,
+        "DATE": {
+          "START": "08/2016",
+          "END": "12/2018"
+        },
+        "LOCATION_TYPE": "Remote",
+        "DESCRIPTION": "NUPSI é o Núcleo de Prática em Sistemas de Informação oferecido pela UEMG, unidade Frutal. Com o intuito de colocar em prática o aprendizado adquirido em sala. Para atender as necessidades da universidade, foram desenvolvidas aplicações desktop e web.",
+        "SKILLS": [1, 2]
+      }
+    ],
+    "SKILLS": {
+      "HEADER": "Proeficiências"
+    },
+    "EDUCATION": {
+      "HEADER": "Formação",
+      "CONTENT": [
+        {
+          "SCHOOL": "Universidade do Estado de Minas Gerais, UEMG",
+          "DEGREE": "Bacharelado",
+          "FIELD": "Sistemas de Informação",
+          "DATE": {
+            "START": "08/2016",
+            "END": "12/2018"
+          },
+          "DESCRIPTION": "",
+          "SKILLS": [1, 2]
+        },
+        {
+          "SCHOOL": "Universidade Aberta e Integrada, UAITEC",
+          "DEGREE": "Bacharelado",
+          "FIELD": "Desenvolvedor de Jogos Eletrônicos",
+          "DATE": {
+            "START": "08/2016",
+            "END": "12/2018"
+          },
+          "DESCRIPTION": "",
+          "SKILLS": [1, 2]
+        }
+      ]
+    }
+  }
+}
